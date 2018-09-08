@@ -1,0 +1,23 @@
+.page {
+    &__wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+.header {
+    @refSpace: 15px;
+
+    width: calc(100% - 2*@refSpace);
+    margin-left: -@refSpace;
+    margin-right:- @refSpace;
+
+    &__navigation {
+        display: flex;
+        justify-content: center;
+    }
+    
+    &__navRef {
+        margin-left: @refSpace;
+        margin-right: @refSpace;
+    }
+}

@@ -1,1 +1,1 @@
-console.log("Entry point!");
+import root from "./root/style.less";

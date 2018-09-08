@@ -12,7 +12,7 @@ let devModeSettings = { //seems doesn't affect except url
 }
 
 let config = {
-    entry: "./indexPage/modules/main.js",
+    entry: "./entry.js",
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname,"out"),
@@ -38,6 +38,18 @@ let config = {
         new extractHTML({
             filename: "../powerSystem.html",
             template: "./powerSystem/modules/root/index.pug"
+        }),
+        new extractHTML({
+            filename: "../computingSystem.html",
+            template: "./computingSystem/modules/root/index.pug"
+        }),
+        new extractHTML({
+            filename: "../dataAndCoolingSystem.html",
+            template: "./dataAndCoolingSystem/modules/root/index.pug"
+        }),
+        new extractHTML({
+            filename: "../ioSystem.html",
+            template: "./ioSystem/modules/root/index.pug"
         })
 
 

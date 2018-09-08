@@ -81,19 +81,54 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./indexPage/modules/main.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./entry.js");
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./entry.js":
+/*!******************!*\
+  !*** ./entry.js ***!
+  \******************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sharedRes_commonStyles_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sharedRes/commonStyles.less */ \"./sharedRes/commonStyles.less\");\n/* harmony import */ var _sharedRes_commonStyles_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sharedRes_commonStyles_less__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _indexPage_modules_main_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./indexPage/modules/main.js */ \"./indexPage/modules/main.js\");\n\r\n\r\n\n\n//# sourceURL=webpack:///./entry.js?");
+
+/***/ }),
 
 /***/ "./indexPage/modules/main.js":
 /*!***********************************!*\
   !*** ./indexPage/modules/main.js ***!
   \***********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _root_style_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./root/style.less */ \"./indexPage/modules/root/style.less\");\n/* harmony import */ var _root_style_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_root_style_less__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack:///./indexPage/modules/main.js?");
+
+/***/ }),
+
+/***/ "./indexPage/modules/root/style.less":
+/*!*******************************************!*\
+  !*** ./indexPage/modules/root/style.less ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log(\"Entry point!\");\n\n//# sourceURL=webpack:///./indexPage/modules/main.js?");
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./indexPage/modules/root/style.less?");
+
+/***/ }),
+
+/***/ "./sharedRes/commonStyles.less":
+/*!*************************************!*\
+  !*** ./sharedRes/commonStyles.less ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sharedRes/commonStyles.less?");
 
 /***/ })
 
