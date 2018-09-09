@@ -1,0 +1,219 @@
+@import "../projectShare/common.less";
+
+@markerTop: 46%;
+.location {
+    margin-top: 29px;
+    margin-bottom: 48px;
+    margin-left: 1px;
+    margin-right: 1px;
+    @markerWidth: 40px;
+    @iconMarkerWidth: 16px;
+
+    &__map {
+        @markerRatio: 0.4;
+        position: relative;
+        &:after {
+            cursor: pointer;
+            width: @markerWidth*@markerRatio;
+            height: @markerWidth*@markerRatio;
+            background-color: @mainColor;
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            transform: translate(-50%);
+            top: @markerTop;
+            left: 50%;
+        }
+        &-icon:after {
+            background-color: @red;
+            width: @iconMarkerWidth*@markerRatio;
+            height: @iconMarkerWidth*@markerRatio;
+        }
+    }
+    &__img {
+        border-radius: @roundBorder @roundBorder 0 0;
+        max-height: 205px;
+        width: 100%;
+        object-fit: none;
+    }
+    &__marker {
+        cursor: pointer;
+        position: absolute;
+        width: @markerWidth;
+        height: @markerWidth/2;
+        background-color: @red;
+        transform: translate(-50%, -60%);
+        top: @markerTop;
+        left: 50%;
+        border-radius: @markerWidth/2 @markerWidth/2 0 0;
+        &-icon {
+            background-color: @mainColor;
+            width: @iconMarkerWidth;
+            height: @iconMarkerWidth/2;
+            border-radius: @iconMarkerWidth/2 @iconMarkerWidth/2 0 0;
+        }
+    }
+
+
+    &__shadow {
+        @shadowWidth: @markerWidth*0.40;
+        @shadowHeight: @markerWidth*1.05;
+        width:  @shadowWidth;
+        height: @shadowHeight;
+        background: linear-gradient(rgba(20,20,20,0.21), rgba(60,60,60,0.18));
+        position: absolute;
+        left: 50%;
+        top: @markerTop;
+
+        border-radius: 50%;
+        border-top-left-radius: @shadowWidth 0.65*@shadowHeight;
+        border-top-right-radius:  @shadowWidth 0.65*@shadowHeight;
+
+        transform-origin: 100% 0;
+        transform: translate(123%, 58%) rotate(62deg); 
+    }
+    
+    @triangleRatio: 0.80;
+
+    &__triangle,
+    &__triangle:before,
+    &__triangle:after {
+        width: @markerWidth*@triangleRatio;
+        height: @markerWidth*@triangleRatio;
+        border-top-right-radius: 100%;
+        cursor: pointer;
+    }
+    &__triangle-icon, &__triangle-icon:before, &__triangle-icon:after {
+        width: @iconMarkerWidth*@triangleRatio;
+        height: @iconMarkerWidth*@triangleRatio;
+    }
+
+    &__triangle {
+        &Box {
+            position: absolute;
+            transform: scaleY(0.87) translate(-50%, 15%) rotate(180deg);
+            top: @markerTop;
+            left: 50%;
+        }   
+        position: relative;
+        background-color: @red;
+        border-top-right-radius: 15%;
+
+        transform: rotate(-60deg) skewX(-30deg) scale(1,0.866);
+        &:before,&:after {
+            content: '';
+            position: absolute;
+            background-color: inherit;
+        }
+        &:before {
+            transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+        }
+        &:after {
+            transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+        }
+        &-icon {
+            background-color: @mainColor;
+        }
+    }
+    &__content {
+        background-color: @red;
+        color: @mainColor;
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: -3px;
+        transform: translateY(-2px);
+        border-radius: 0 0 @roundBorder @roundBorder;
+        padding-top: 12px;
+        padding-bottom: 20px;
+        padding-left: 27px;
+        padding-right: 28px + @iconMarkerWidth/2;
+    }
+    &__slogan {
+        text-transform: none;
+        .fontSize8();
+        margin-right: 23px;
+        transform: scaleY(1.05);
+    }
+    &__address {
+        font-family: "LatoBlack", Arial, sans-serif;
+        .fontSize3();
+        margin-top: 7px;
+        letter-spacing: 0.9px;
+    }
+    &__localPos {
+        margin-bottom: 4px;
+    }
+    &__building {
+        margin-right: 6px;
+    }
+    &__countryPos {
+        margin-top: -4px;
+    }
+    &__localPos,&__countryPos {
+        transform: scaleY(1.1);
+    }
+
+
+    &__space {
+        flex-grow: 1;
+        max-width: 40%;
+    }
+    
+    &__icons {
+        flex-grow: 1;
+        flex-shrink: 0;
+        max-width: 52px;
+        display: flex;
+        margin-top: 12px;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    @aimWidth: 9px;
+    @targetSize: 19px;
+    @thickness: 1.5px;
+
+    .targetLine (@aimHeight) {
+        background-color: @mainColor;
+        width: @aimWidth;
+        height: @aimHeight;
+        position: absolute;
+        content: "";
+    }
+
+    &__targetIcon {
+        cursor: pointer;
+        width: @targetSize;
+        height: @targetSize;
+        border: @thickness solid @mainColor;
+        box-sizing: border-box;
+        border-radius: 50%;
+        position: relative;
+        &:before, &:after {
+            .targetLine(2px);
+            transform: rotate(90deg);
+            right: calc(50% - @aimWidth/2);
+        }
+        &:before {
+            top: -@thickness;
+        }
+        &:after {
+            bottom: -@thickness;
+        }
+    }
+    &__horTargetLine {
+        @horHeight: 2px;
+        .targetLine(@horHeight);
+        top: 50%;
+        &-left {
+            left: calc(-@aimWidth/2 - @thickness/2);
+        }
+        &-right {
+            right: calc(-@aimWidth/2 - @thickness/2);
+        }
+    }
+    &__markerIcon {
+        margin-top: 4px;
+        transform: translate(2px);
+    }
+}

@@ -64,7 +64,7 @@ mixin createStageChart(progress, startId = 1, elemClass = "warning", maximum = 5
     - var possibleClass = "couldBe_" + elemClass;
     - var notAchieved = "notAchieved";
     - var currentId
-    - var groupName = "group_" + idStart;
+    - var groupName = "group_" + startId;
     - for(var j = 0; j < maximum; j++)
         - var classes = "stageChart__clickBox " + "stageChart__clickBox-" + (j+1) +"of" + maximum
         - currentId = "SC_" + startId + "_" + j
@@ -103,7 +103,7 @@ mixin createRadioGroup(quantity, activeNumber, startId, spaced, ...vals)
                 .switch__toggle(data-toggleVal= vals[i])
                     .switch__indicator
 
-mixin createCheckGroup(quantity, startId, spaced, ...activeNumbers )
+mixin createCheckGroup(quantity, startId, spaced, descriptions, ...activeNumbers )
     - for(var i = 0; i < quantity; i++)
         - var currentId = "CG_" + startId + "_" + i
         - if( activeNumbers.includes(i+1) )
@@ -112,9 +112,13 @@ mixin createCheckGroup(quantity, startId, spaced, ...activeNumbers )
             input.switch__input(type= "checkbox", id= currentId)
         label.switch__label(for= currentId)
             - if(spaced && (i!=(quantity - 1)))
-                .switch__tickBox.switch__space-large
-            - else 
-                .switch__tickBox
+                .switch__tickContainer
+                    .switch__tickBox
+                    .switch__description.switch__space-extreme #{descriptions[i]}
+            - else
+                .switch__tickContainer 
+                    .switch__tickBox
+                    .switch__description  #{descriptions[i]}
 
 mixin createNews(imgSrc, header, date, details)
     .news 
@@ -141,10 +145,11 @@ mixin createEvent(imgSrc, day, month, title, details, isLastInBlock = true)
             "!event__button")
 
 
-mixin createLocation(imgSrc, slogan, building, street, countryPos)
+mixin createLocation(imgSrc, slogan, building, street, countryPos, deltaX, deltaY)
+    - var locStyle = "object-position: " + deltaX +"% " + deltaY +"%";
     .location
         .location__map
-            img.location__img(src= imgSrc)
+            img.location__img(src= imgSrc, style= locStyle)
             .location__marker
             .location__shadow
             .location__triangleBox
@@ -172,7 +177,7 @@ mixin createLocation(imgSrc, slogan, building, street, countryPos)
 
 
 mixin createCalendar(startId,currentDay, month, lastDayCurrent, weekDayStart = 1, lastDayPrev )
-    - var msg = "Today is " + month + ", " + currentDay;
+    - var msg = "Ближайший особый день: " + month + "," + currentDay;
     .calendar
         .calendar__header
             .calendar__currentDay #{currentDay}
@@ -181,13 +186,13 @@ mixin createCalendar(startId,currentDay, month, lastDayCurrent, weekDayStart = 1
                 .calendar__arrow.calendar__arrow-left
                 .calendar__arrow.calendar__arrow-right
             .calendar__week
-                .calendar__weekDay.calendar__weekDay-toLeft mon
-                .calendar__weekDay tue
-                .calendar__weekDay wed
-                .calendar__weekDay thu
-                .calendar__weekDay fri
-                .calendar__weekDay sat
-                .calendar__weekDay sun
+                .calendar__weekDay.calendar__weekDay-toLeft пн
+                .calendar__weekDay вт
+                .calendar__weekDay ср
+                .calendar__weekDay чт
+                .calendar__weekDay пт
+                .calendar__weekDay сб
+                .calendar__weekDay вс
 
         .calendar__content
             - var deltaStart = weekDayStart - 1
@@ -214,7 +219,7 @@ mixin createCalendar(startId,currentDay, month, lastDayCurrent, weekDayStart = 1
                             input.calendar__radio(type= "radio", id= currentId, name= groupName, checked)
                             label.calendar__label(for= currentId)
                                 div(class= classes) #{showDay}
-                            .calendar__footer(data-msg= msg) Today
+                            .calendar__footer(data-msg= msg) Особый день!
 
                         - else if(showState == 1)
                             input.calendar__radio(type= "radio", id= currentId, name= groupName)

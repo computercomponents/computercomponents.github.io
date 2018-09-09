@@ -1,0 +1,115 @@
+@import "./common.less";
+
+@media (max-width: 700px) {
+    .content {
+        margin-top: 50px;
+        &__halfSection {
+            width: 100%;
+            &-right {
+                margin-top: 30px;
+            }
+        }
+        &__title {
+            &-notCentered,&-left,&-right {
+                transform: none;
+            }
+            &-left, &-right {
+                margin-bottom: 40px;
+            }
+        }
+    }
+    .standardButtons {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 20px;
+        &__elem {
+            width: 50%;
+            text-align: center;
+            &:first-child {
+                order: -2;
+            }
+            &:last-child {
+                order: -1;
+            }
+        }
+        &__button {
+            display: inline-block;
+        }
+    }
+    .arrowButtons {
+        &__container {
+            width: 100%;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        &__button:first-child {
+            margin-right: 25px;
+        }
+    }   
+    .circleDiagrams{
+        margin-top: 40px;
+        &__diagram {
+            width: 50%;
+            margin-left: 0 ;
+            margin-bottom: 25px;
+            &-pie {
+                width: 100%;
+                height: @circle-size;
+            }
+        }
+    }
+    .sliders {
+        margin-top: 20px;
+        &__slider {
+            margin: 0 auto;
+        }
+        &__sliderBox {
+        width: 100%;
+        margin-top: 40px;
+        }
+    }
+
+    .userProfile,.messaging,.event,.switch {
+        margin-left: 0;
+    }
+    .news,.calendar {
+        margin-right: 0;
+    }
+
+    .stageChart {
+        margin-top: 40px;
+    }
+    .news__details {
+        .fontSize3();
+    }
+    .video__info{
+        &-name {
+            .fontSize6Big();
+            top: 10px;
+        }
+        &-author {
+            bottom: -20px;
+        }
+        &-url {
+            bottom: -45px;
+            .fontSize4();
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+    .location {
+        &__content {
+            padding-left: 15px;
+            padding-right: 20px;
+        }
+        &__slogan {
+            margin-top: 10px;
+            margin-right: 0;
+            order: 9999;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
