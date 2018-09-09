@@ -1,5 +1,10 @@
+include ../../../sharedRes/mixins
+
 head
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title Главная
     link(rel="stylesheet", href="out/styles.css")
 body.page
     .page__wrapper
@@ -13,3 +18,9 @@ body.page
                     a(href="dataAndCoolingSystem.html") Подсистема хранения данных и охлаждение
                 li.header__navRef 
                     a(href="ioSystem.html") Периферийная система
+            h1.header__title Добро пожаловать на сайт по подбору компьютерных комплектующих!
+        .page__content.content
+            p.content__p Давно хотели собрать производительный компьютер, но цены на готовые решения в магазинах кусаются?
+                |  Тогда вы обратились по адресу!
+            h2.content__title С чего же начать?
+            +createElement("","arrowButtons__button","toLeft","borderOnly")

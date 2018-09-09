@@ -1,0 +1,84 @@
+@import "../projectShare/common.less";
+
+@arrowCenter: 30%;
+@arrowHeight: 3.5px;
+
+.arrowButtons {
+    margin: 0 12.6%;
+    margin-top: 35px;
+    margin-bottom: 46px;
+    &__box {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    &__title {
+        position: relative;
+        top: 1px;
+        left: 1px;
+        letter-spacing: 0.9px;
+        word-spacing: 5px;
+
+    }
+    &__container {
+        display: flex;
+        width: 33.3%;
+        justify-content: space-around;
+    }
+    &__button {
+        cursor: pointer;
+        box-sizing: border-box;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        &-borderOnly {
+            border: 2.5px solid @lightGreen;
+            &::before, &::after {
+                background-color: @lightGreen;
+            }
+        }
+        &-disabled {
+            background-color: @lightGrey;
+            &::before, &::after {
+                background-color: @mainColor;
+            }
+        }
+        &-enabled {
+            background-color: @lightGreen;
+            &::before, &::after {
+                background-color: @mainColor;
+            }
+        }
+
+
+        &-toLeft {
+            &::before {
+                left: @arrowCenter;
+                transform: translateY(100%) rotate(45deg);
+            }
+            &::after {
+                left: @arrowCenter;
+                transform: translateY(calc(-100% - @arrowHeight + 0.2px)) rotate(-45deg);
+            }
+        }
+        &-toRight {
+            &::before {
+                right: @arrowCenter;
+                transform: translateY(calc(-100% - @arrowHeight + 0.2px)) rotate(45deg);
+            }
+            &::after {
+                right: @arrowCenter;
+                transform:translateY(100%) rotate(-45deg);
+            }
+        }
+
+
+        &::before, &::after {
+            position: absolute;
+            content: "";
+            width: 16px;
+            height: @arrowHeight;
+            top: 50%;
+        }
+    }
+}

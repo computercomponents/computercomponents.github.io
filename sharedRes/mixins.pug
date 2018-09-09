@@ -1,0 +1,254 @@
+mixin createElement(elementText, elementName, ...modifiers) 
+    -var classes = elementName
+    each mod in modifiers
+        - if (mod[0] == '!')
+            - elementName = mod.substring(1) 
+            - classes += (" " + elementName)
+        - else 
+            - classes += (" " + elementName + "-" + mod)
+    div(class= classes)
+        span.element__inner #{elementText}
+
+mixin createCircleProgress(percent, percentDelta = 0)
+    - var rotatePercent = percent - percentDelta;
+    - var str = "transform: rotate(" + rotatePercent*1.8 + "deg)"
+    .radialProgress(data-percent= percent)
+        .radialProgress__mask.radialProgress__mask-full(style= str)
+            .radialProgress__fill(style= str)
+        .radialProgress__mask
+            .radialProgress__fill(style= str)
+        .radialProgress__inset
+
+mixin createPieChart(partsNumber, ...details)
+    - var progress = 0
+    .pieChart
+        - for(var i = 0; i < partsNumber; i++)
+            - var iterations = 1
+            - var current = details[i]*3.6    
+            - if (current > 180)
+                - iterations = 2
+                - current/=2
+
+            - var beforeStyle = "transform: rotate(" + (current +1) + "deg)"
+            - var classes = "pieChart__part-before " + details[i+partsNumber]
+
+            - for(var j = 0; j < iterations; j++)
+                - var style = "transform: rotate(" + progress +"deg)"
+                div.pieChart__part(style= style)
+                    div(class= classes, style= beforeStyle)
+                - progress += current
+
+
+mixin createWarningSlider(percent)
+    - var style = "left: " + percent + "%";
+    .sliders__slider.sliders__slider-warning
+        .sliders__drag.sliders__drag-warning(style= style)
+            .sliders__warningValue(data-percent= percent)
+
+mixin createSuccessSlider(percent)
+    - var style = "left: " + percent + "%";
+    - var styleWidth = "width: " + percent + "%"
+    .sliders__slider.sliders__slider-success
+        .sliders__drag.sliders__drag-success(style= style)
+        .sliders__fillSuccess(style= styleWidth)
+        .sliders__axis
+            .sliders__axisValue 0
+            .sliders__axisValue 25
+            .sliders__axisValue 50
+            .sliders__axisValue 75
+            .sliders__axisValue 100
+
+
+
+mixin createStageChart(progress, startId = 1, elemClass = "warning", maximum = 5)
+    - var possibleClass = "couldBe_" + elemClass;
+    - var notAchieved = "notAchieved";
+    - var currentId
+    - var groupName = "group_" + idStart;
+    - for(var j = 0; j < maximum; j++)
+        - var classes = "stageChart__clickBox " + "stageChart__clickBox-" + (j+1) +"of" + maximum
+        - currentId = "SC_" + startId + "_" + j
+        - if(progress == (j+1))
+            input(class= classes, id= currentId, type= "radio", name= groupName, checked)
+        - else
+            input(class= classes, id= currentId, type= "radio", name= groupName)
+
+    .stageChart
+        - for(var i = 0; i < maximum; i++)
+            - var deltaClass = "pos" + (i+1);
+            - currentId = "SC_" + startId + "_" + i
+            if(i < progress)
+                label.stageChart__label(for= currentId)
+                    +createElement(i+1,"stageChart__value",elemClass, possibleClass, deltaClass)
+            else
+                label.stageChart__label(for= currentId)
+                    +createElement(i+1,"stageChart__value",notAchieved, possibleClass, deltaClass)
+                    
+    .stageChart__scale
+    .stageChart__progress.stageChart__progress-warning
+
+mixin createRadioGroup(quantity, activeNumber, startId, spaced = true)
+    - var groupName = "RG#" + startId
+    - for(var i = 0; i < quantity; i++)
+        - var currentId = "CRG_" + startId + "_" + i
+        - if( (i+1) == activeNumber)
+            input.switch__input(type= "radio", checked, id= currentId, name= groupName)
+        - else
+            input.switch__input(type= "radio", id= currentId, name= groupName)
+        label.switch__label(for= currentId)
+            - if(spaced && (i!=(quantity - 1)))
+                .switch__toggle.switch__space
+                    .switch__indicator
+            - else 
+                .switch__toggle
+                    .switch__indicator
+
+mixin createCheckGroup(quantity, startId, spaced, ...activeNumbers )
+    - for(var i = 0; i < quantity; i++)
+        - var currentId = "CG_" + startId + "_" + i
+        - if( activeNumbers.includes(i+1) )
+            input.switch__input(type= "checkbox", checked, id= currentId)
+        - else
+            input.switch__input(type= "checkbox", id= currentId)
+        label.switch__label(for= currentId)
+            - if(spaced && (i!=(quantity - 1)))
+                .switch__tickBox.switch__space-large
+            - else 
+                .switch__tickBox
+
+mixin createNews(imgSrc, header, date, details)
+    .news 
+        img.news__img(src= imgSrc)
+        .news__content
+            .news__header #{header}
+            .news__date #{date}
+            .news__details #{details}
+
+
+mixin createEvent(imgSrc, day, month, title, details, isLastInBlock = true)
+    - var classes = "event"
+    - if(isLastInBlock)
+        - classes += " event__lastInBlock";
+    div(class= classes)
+        img.news__img.event__img(src= imgSrc)
+        .news__content.event__content
+            .event__date
+                span.event__day #{day}
+                span.event__month #{month}
+            .event__title #{title}
+            .news__details.event__details #{details}
+            +createElement("Add to calendar","standardButtons__button", "small", "empty", "success", "darkestGreen",
+            "!event__button")
+
+
+mixin createLocation(imgSrc, slogan, building, street, countryPos)
+    .location
+        .location__map
+            img.location__img(src= imgSrc)
+            .location__marker
+            .location__shadow
+            .location__triangleBox
+                .location__triangle
+
+        .location__content
+            .location__slogan #{slogan}
+            .location__address
+                .location__localPos
+                    span.location__building #{building}
+                    span.location__street #{street}
+                .location__countryPos #{countryPos}
+
+            .location__space
+
+            .location__icons
+                .location__targetIcon
+                    .location__horTargetLine.location__horTargetLine-left
+                    .location__horTargetLine.location__horTargetLine-right
+
+                .location__markerIcon.location__map.location__map-icon
+                    .location__marker.location__marker-icon
+                    .location__triangleBox
+                        .location__triangle.location__triangle-icon
+
+
+mixin createCalendar(startId,currentDay, month, lastDayCurrent, weekDayStart = 1, lastDayPrev )
+    - var msg = "Today is " + month + ", " + currentDay;
+    .calendar
+        .calendar__header
+            .calendar__currentDay #{currentDay}
+            .calendar__month 
+                .calendar__monthLabel #{month}
+                .calendar__arrow.calendar__arrow-left
+                .calendar__arrow.calendar__arrow-right
+            .calendar__week
+                .calendar__weekDay.calendar__weekDay-toLeft mon
+                .calendar__weekDay tue
+                .calendar__weekDay wed
+                .calendar__weekDay thu
+                .calendar__weekDay fri
+                .calendar__weekDay sat
+                .calendar__weekDay sun
+
+        .calendar__content
+            - var deltaStart = weekDayStart - 1
+            - var totalDays = lastDayCurrent + deltaStart;
+            - var rowsToShow = totalDays/7;
+            - var groupName = "Calendar__group__" + startId;
+
+            - var showState = 1; 
+            - var startDay = 1;
+
+            - if(deltaStart > 0)
+                - showState = 0;
+                - startDay = lastDayPrev - deltaStart + 1; 
+
+            - for(var i = 0; i < rowsToShow; i++)
+                .calendar__weekRow
+                    - for(var j = 0; j < 7; j++)
+                        - var currentId = "Calendar__" + startId + "__" + (i*7 + j);
+                        - var showDay = startDay + j + i*7;
+                        - var classes = "calendar__dayRow";
+
+                        - if((showState == 1) && (showDay == currentDay))
+                            - classes += " calendar__dayRow-current"
+                            input.calendar__radio(type= "radio", id= currentId, name= groupName, checked)
+                            label.calendar__label(for= currentId)
+                                div(class= classes) #{showDay}
+                            .calendar__footer(data-msg= msg) Today
+
+                        - else if(showState == 1)
+                            input.calendar__radio(type= "radio", id= currentId, name= groupName)
+                            label.calendar__label(for= currentId)
+                                div(class= classes) #{showDay}
+
+                        - else 
+                            - classes += " calendar__dayRow-notActive"
+                            input.calendar__radio(type= "radio", id= currentId)
+                            label.calendar__label.calendar__label-disabled
+                                div(class= classes) #{showDay}
+
+
+                        - if((showState == 0) && (showDay == lastDayPrev))
+                            - showState = 1;
+                            - startDay = - j;
+                        
+                        - if((showState == 1) && (showDay == lastDayCurrent))
+                            - showState = 2;
+                            - startDay = - i*7 - j;
+        .calendar__expand
+
+
+mixin createMessaging(fullName, avatar, incomeMsg, outcomeMsg) 
+    .messaging
+        .messaging__fullName #{fullName}
+        .messaging__line
+        .messaging__icons
+            .messaging__icon.messaging__icon-msg
+            img.messaging__avatar.userProfile__photo.messaging__avatar-altCentered(src = avatar, alt)
+            .messaging__icon.messaging__icon-photo
+        .messaging__mainArea
+            .messaging__msg.messaging__msg-income
+                span.messaging__textContent #{incomeMsg}
+            .messaging__msg.messaging__msg-outcome
+                span.messaging__textContent #{outcomeMsg}
+            +createElement("Reply","standardButtons__button", "big", "shadow", "success", "!messaging__replyBtn")

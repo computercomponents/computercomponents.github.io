@@ -1,23 +1,65 @@
 @import "vars.less";
 
+@font-face {
+	font-family: 'LatoLight';
+	src: url('fonts/LatoLight.ttf')  format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LatoBlack';
+	src: url('fonts/LatoBlack.ttf')  format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LatoBold';
+	src: url('fonts/LatoBold.ttf')  format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LatoRegular';
+	src: url('fonts/LatoRegular.ttf')  format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SourceRegular';
+	src: url('fonts/SourceRegular.ttf')  format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SourceLight';
+	src: url('fonts/SourceLight.ttf')  format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
  
+.page {
+    background-color: @backgroundGrey;
+    margin-top: 40px;
+    margin-bottom: 30px;
+	font-family: "LatoRegular", Impact, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
 ul {
     list-style: none;
 }
 a {
     text-decoration: none;
-}
-a, a:visited,a:active {
-    color: @creamColor;
-}
-
-.page {
-    background-color: @backgroundGrey;
-    margin-top: 40px;
-    margin-bottom: 30px;
 }

@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sharedRes_commonStyles_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sharedRes/commonStyles.less */ \"./sharedRes/commonStyles.less\");\n/* harmony import */ var _sharedRes_commonStyles_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sharedRes_commonStyles_less__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _indexPage_modules_main_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./indexPage/modules/main.js */ \"./indexPage/modules/main.js\");\n\r\n\r\n\n\n//# sourceURL=webpack:///./entry.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sharedRes_script_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sharedRes/script.js */ \"./sharedRes/script.js\");\n/* harmony import */ var _indexPage_modules_main_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./indexPage/modules/main.js */ \"./indexPage/modules/main.js\");\n\r\n\r\n\n\n//# sourceURL=webpack:///./entry.js?");
 
 /***/ }),
 
@@ -121,6 +121,28 @@ eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./in
 
 /***/ }),
 
+/***/ "./sharedRes/arrowBtns sync recursive \\.less$/i":
+/*!********************************************!*\
+  !*** ./sharedRes/arrowBtns sync \.less$/i ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var map = {\n\t\"./style.less\": \"./sharedRes/arrowBtns/style.less\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tvar id = map[req];\n\tif(!(id + 1)) { // check for number or string\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn id;\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./sharedRes/arrowBtns sync recursive \\\\.less$/i\";\n\n//# sourceURL=webpack:///./sharedRes/arrowBtns_sync_\\.less$/i?");
+
+/***/ }),
+
+/***/ "./sharedRes/arrowBtns/style.less":
+/*!****************************************!*\
+  !*** ./sharedRes/arrowBtns/style.less ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sharedRes/arrowBtns/style.less?");
+
+/***/ }),
+
 /***/ "./sharedRes/commonStyles.less":
 /*!*************************************!*\
   !*** ./sharedRes/commonStyles.less ***!
@@ -129,6 +151,95 @@ eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./in
 /***/ (function(module, exports) {
 
 eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sharedRes/commonStyles.less?");
+
+/***/ }),
+
+/***/ "./sharedRes/fonts sync recursive \\.(?:eot|svg|ttf|woff)$/i":
+/*!********************************************************!*\
+  !*** ./sharedRes/fonts sync \.(?:eot|svg|ttf|woff)$/i ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var map = {\n\t\"./LatoBlack.ttf\": \"./sharedRes/fonts/LatoBlack.ttf\",\n\t\"./LatoBold.ttf\": \"./sharedRes/fonts/LatoBold.ttf\",\n\t\"./LatoLight.ttf\": \"./sharedRes/fonts/LatoLight.ttf\",\n\t\"./LatoRegular.ttf\": \"./sharedRes/fonts/LatoRegular.ttf\",\n\t\"./SourceLight.ttf\": \"./sharedRes/fonts/SourceLight.ttf\",\n\t\"./SourceRegular.ttf\": \"./sharedRes/fonts/SourceRegular.ttf\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tvar id = map[req];\n\tif(!(id + 1)) { // check for number or string\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn id;\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./sharedRes/fonts sync recursive \\\\.(?:eot|svg|ttf|woff)$/i\";\n\n//# sourceURL=webpack:///./sharedRes/fonts_sync_\\.(?");
+
+/***/ }),
+
+/***/ "./sharedRes/fonts/LatoBlack.ttf":
+/*!***************************************!*\
+  !*** ./sharedRes/fonts/LatoBlack.ttf ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"fonts/LatoBlack.ttf\";\n\n//# sourceURL=webpack:///./sharedRes/fonts/LatoBlack.ttf?");
+
+/***/ }),
+
+/***/ "./sharedRes/fonts/LatoBold.ttf":
+/*!**************************************!*\
+  !*** ./sharedRes/fonts/LatoBold.ttf ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"fonts/LatoBold.ttf\";\n\n//# sourceURL=webpack:///./sharedRes/fonts/LatoBold.ttf?");
+
+/***/ }),
+
+/***/ "./sharedRes/fonts/LatoLight.ttf":
+/*!***************************************!*\
+  !*** ./sharedRes/fonts/LatoLight.ttf ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"fonts/LatoLight.ttf\";\n\n//# sourceURL=webpack:///./sharedRes/fonts/LatoLight.ttf?");
+
+/***/ }),
+
+/***/ "./sharedRes/fonts/LatoRegular.ttf":
+/*!*****************************************!*\
+  !*** ./sharedRes/fonts/LatoRegular.ttf ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"fonts/LatoRegular.ttf\";\n\n//# sourceURL=webpack:///./sharedRes/fonts/LatoRegular.ttf?");
+
+/***/ }),
+
+/***/ "./sharedRes/fonts/SourceLight.ttf":
+/*!*****************************************!*\
+  !*** ./sharedRes/fonts/SourceLight.ttf ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"fonts/SourceLight.ttf\";\n\n//# sourceURL=webpack:///./sharedRes/fonts/SourceLight.ttf?");
+
+/***/ }),
+
+/***/ "./sharedRes/fonts/SourceRegular.ttf":
+/*!*******************************************!*\
+  !*** ./sharedRes/fonts/SourceRegular.ttf ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"fonts/SourceRegular.ttf\";\n\n//# sourceURL=webpack:///./sharedRes/fonts/SourceRegular.ttf?");
+
+/***/ }),
+
+/***/ "./sharedRes/script.js":
+/*!*****************************!*\
+  !*** ./sharedRes/script.js ***!
+  \*****************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _commonStyles_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./commonStyles.less */ \"./sharedRes/commonStyles.less\");\n/* harmony import */ var _commonStyles_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_commonStyles_less__WEBPACK_IMPORTED_MODULE_0__);\n\r\nlet req;\r\ntry {\r\n    req = __webpack_require__(\"./sharedRes/fonts sync recursive \\\\.(?:eot|svg|ttf|woff)$/i\");\r\n    req.keys().forEach((key) => req(key)); \r\n} catch(ex) {} \r\n\r\nreq = __webpack_require__(\"./sharedRes/arrowBtns sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\n\n//# sourceURL=webpack:///./sharedRes/script.js?");
 
 /***/ })
 
