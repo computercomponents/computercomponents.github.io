@@ -1,0 +1,123 @@
+@import "../projectShare/common.less";
+
+@transitionTime: 0.7s;
+@progressHeight: 5px;
+@maxProgressWidth: calc(100% - 10px);
+
+.achievedWarning() {
+    color: @mainColor;
+    background-color: @red;
+}
+
+.stageChart {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    @valueHeight: 29px;
+    .notAchieved() {
+        background-color: @mediumLighterGrey;
+        color: @darkGrey;
+    }
+    &__label .element__inner {
+        display: inline-block;
+        transform: translateY(-1px) scaleY(0.95);
+    }
+    &__label:nth-child(2) &__value {
+        transform: translateX(-5px);
+    }
+    &__value {
+        cursor: pointer;
+        width: @valueHeight;
+        height: @valueHeight;
+        border-radius: 50%;
+        line-height: @valueHeight;
+        .fontSize4();
+        font-family: "LatoBlack";
+        text-align: center;
+        box-sizing: border-box;
+        transition: background-color ease-in-out @transitionTime, color ease-in-out @transitionTime;
+        &-warning {
+           .achievedWarning();
+        }
+        &-notAchieved {
+            .notAchieved();
+        }
+        &-pos4 {
+            padding-right: 3px;
+        }
+    }
+    &__progress {
+        height: @progressHeight;
+        margin-top: -@progressHeight;
+        margin-bottom: 66px;
+        width: 0%;
+        transition: width ease-in-out @transitionTime;
+        &-warning {
+            background-color: @red;
+        }
+    }
+    &__scale {
+        height: @progressHeight;
+        margin-top: -(@valueHeight + @progressHeight)/2;
+        .notAchieved();
+        width: @maxProgressWidth;
+    }
+    &__clickBox {
+        display: none;
+    }
+    input&__clickBox{
+        @sc: ~".stageChart__progress";
+        @makeWarning: ~".stageChart label .stageChart__value-couldBe_warning";
+        @child: ~".stageChart label";
+        @value: ~" .stageChart__value";
+        &-1of5:checked {
+            & ~ @{sc} {
+            width: 0%; 
+            }
+            & ~ @{child}:nth-child(n+2)@{value} {
+                .notAchieved();
+            }
+        }
+        &-2of5:checked {
+            & ~ @{sc} {
+            width: 25%; 
+            }
+            & ~ @{makeWarning} {
+                .achievedWarning();
+            }
+            & ~ @{child}:nth-child(n+3)@{value} {
+                .notAchieved();
+            }
+        }
+        &-3of5:checked {
+            & ~ @{sc} {
+            width: 50%; 
+            }
+            & ~ @{makeWarning} {
+                .achievedWarning();
+            }
+            & ~ @{child}:nth-child(n+4)@{value} {
+                .notAchieved();
+            }
+        }
+        &-4of5:checked {
+            & ~ @{sc} {
+            width: 75%; 
+            }
+            & ~ @{makeWarning} {
+                .achievedWarning();
+            }
+            & ~ @{child}:nth-child(n+5)@{value} {
+                .notAchieved();
+            }
+        }
+        &-5of5:checked {
+            & ~ @{sc} {
+            width: @maxProgressWidth;
+            }
+            & ~ @{makeWarning} {
+                .achievedWarning();
+            }
+        }
+    }
+}

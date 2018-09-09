@@ -239,7 +239,51 @@ eval("module.exports = __webpack_require__.p + \"fonts/SourceRegular.ttf\";\n\n/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _commonStyles_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./commonStyles.less */ \"./sharedRes/commonStyles.less\");\n/* harmony import */ var _commonStyles_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_commonStyles_less__WEBPACK_IMPORTED_MODULE_0__);\n\r\nlet req;\r\ntry {\r\n    req = __webpack_require__(\"./sharedRes/fonts sync recursive \\\\.(?:eot|svg|ttf|woff)$/i\");\r\n    req.keys().forEach((key) => req(key)); \r\n} catch(ex) {} \r\n\r\nreq = __webpack_require__(\"./sharedRes/arrowBtns sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\n\n//# sourceURL=webpack:///./sharedRes/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _commonStyles_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./commonStyles.less */ \"./sharedRes/commonStyles.less\");\n/* harmony import */ var _commonStyles_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_commonStyles_less__WEBPACK_IMPORTED_MODULE_0__);\n\r\nlet req;\r\ntry {\r\n    req = __webpack_require__(\"./sharedRes/fonts sync recursive \\\\.(?:eot|svg|ttf|woff)$/i\");\r\n    req.keys().forEach((key) => req(key)); \r\n} catch(ex) {} \r\n\r\nreq = __webpack_require__(\"./sharedRes/arrowBtns sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/stages sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/switches sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\n\n//# sourceURL=webpack:///./sharedRes/script.js?");
+
+/***/ }),
+
+/***/ "./sharedRes/stages sync recursive \\.less$/i":
+/*!*****************************************!*\
+  !*** ./sharedRes/stages sync \.less$/i ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var map = {\n\t\"./style.less\": \"./sharedRes/stages/style.less\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tvar id = map[req];\n\tif(!(id + 1)) { // check for number or string\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn id;\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./sharedRes/stages sync recursive \\\\.less$/i\";\n\n//# sourceURL=webpack:///./sharedRes/stages_sync_\\.less$/i?");
+
+/***/ }),
+
+/***/ "./sharedRes/stages/style.less":
+/*!*************************************!*\
+  !*** ./sharedRes/stages/style.less ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sharedRes/stages/style.less?");
+
+/***/ }),
+
+/***/ "./sharedRes/switches sync recursive \\.less$/i":
+/*!*******************************************!*\
+  !*** ./sharedRes/switches sync \.less$/i ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var map = {\n\t\"./style.less\": \"./sharedRes/switches/style.less\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tvar id = map[req];\n\tif(!(id + 1)) { // check for number or string\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn id;\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./sharedRes/switches sync recursive \\\\.less$/i\";\n\n//# sourceURL=webpack:///./sharedRes/switches_sync_\\.less$/i?");
+
+/***/ }),
+
+/***/ "./sharedRes/switches/style.less":
+/*!***************************************!*\
+  !*** ./sharedRes/switches/style.less ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sharedRes/switches/style.less?");
 
 /***/ })
 

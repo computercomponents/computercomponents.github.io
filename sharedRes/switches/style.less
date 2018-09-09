@@ -1,0 +1,131 @@
+@import "../projectShare/common.less";
+
+@transitionTime: 0.6s;
+@toggleHeight: 30px;
+@toggleWidth: 130px;
+@indicatorRatio: 0.68;
+@indicatorMargin: 5px;
+
+.switch {
+    margin-left: 16px;
+    &__tickBoxesTitle {
+        transform: translate(8px, -6px) scaleY(0.95);
+    }
+    &__container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        margin-left: -2px;
+        &-notCentered {
+            margin-top: 26px;
+            margin-bottom: 0;
+            margin-left: -10px;
+        }
+    }
+    &__input {
+        display: none;
+    }
+    &__space {
+        margin-right: 14px;
+        &-large {
+            margin-right: 16.5px;
+        }
+        &-enormous {
+            margin-right: 20px;
+        }
+    }
+    &__label {
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    &__toggle {
+        @letterStretch: 1.15;
+        position: relative;
+        width: @toggleWidth;
+        height: @toggleHeight;
+        border-radius: @toggleHeight/2;
+        background-color: @mediumLighterGrey;
+        transition: background-color ease-in-out @transitionTime;
+        &:before {
+            content: attr(data-toggleVal);
+            transform: translateX(@toggleHeight*@indicatorRatio + 8px);
+        }
+        &:after {
+            content: attr(data-toggleVal);
+            opacity: 0;
+            transform: translateX(@toggleWidth/2);
+           
+        }
+        &:before,&:after {
+            transition: opacity ease-in-out @transitionTime, transform ease-in-out @transitionTime ;
+            color: @mainColor;
+            line-height: @toggleHeight;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            font-family: "LatoBlack";
+            .fontSize4();
+            letter-spacing: 0.5px;
+        }
+    }
+    input&__input:checked + &__label &__toggle {
+        background-color: @lightGreen;
+        &:before {
+            opacity: 0;
+            transform: translateX(8px);
+        }
+        &:after {
+            opacity: 1;
+            transform: translateX(12px);
+        }
+    }
+    &__indicator {
+        width:  @toggleHeight*@indicatorRatio;
+        height:  @toggleHeight*@indicatorRatio;
+        background-color: @mainColor;
+        border-radius: 50%;
+        position: absolute;
+        top: 0.13*@toggleHeight;
+        transform: translateX(@indicatorMargin);
+        transition: transform ease-in-out @transitionTime;
+    }
+    input&__input:checked + &__label &__toggle  &__indicator{
+        transform: translateX(@toggleWidth - @toggleHeight*@indicatorRatio - @indicatorMargin);
+    }
+
+    &__tickBox {
+        @yShift: @toggleHeight*0.59;
+        @xShift: @toggleHeight*0.32;
+
+        position: relative;
+        height: @toggleHeight*0.95;
+        width: @toggleHeight*0.95;
+        border-radius: 50%;
+        background-color: @lightGrey;
+        transition: background-color ease-in-out @transitionTime;
+        &:before, &:after {
+            position: absolute;
+            content: "";
+            height: 1.5px;
+            background-color: @mediumLighterGrey;
+            transition: background-color ease-in-out @transitionTime;
+            transform-origin: 0 0;
+        }
+        &:before {
+            width: 4px;
+            transform: translateY(@yShift) translateX(@xShift) rotate(225deg);
+        }
+        &:after {
+            width: 12px;
+            transform: translateY(@yShift) translateX(@xShift)  rotate(-45deg);
+        }
+    }
+    input&__input:checked + &__label &__tickBox {
+        background-color: @lightGreen;
+        &:before, &:after {
+            background-color: @mainColor;
+        }
+    }
+}

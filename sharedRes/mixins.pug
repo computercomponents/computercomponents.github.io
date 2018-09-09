@@ -87,7 +87,7 @@ mixin createStageChart(progress, startId = 1, elemClass = "warning", maximum = 5
     .stageChart__scale
     .stageChart__progress.stageChart__progress-warning
 
-mixin createRadioGroup(quantity, activeNumber, startId, spaced = true)
+mixin createRadioGroup(quantity, activeNumber, startId, spaced, ...vals)
     - var groupName = "RG#" + startId
     - for(var i = 0; i < quantity; i++)
         - var currentId = "CRG_" + startId + "_" + i
@@ -97,10 +97,10 @@ mixin createRadioGroup(quantity, activeNumber, startId, spaced = true)
             input.switch__input(type= "radio", id= currentId, name= groupName)
         label.switch__label(for= currentId)
             - if(spaced && (i!=(quantity - 1)))
-                .switch__toggle.switch__space
+                .switch__toggle.switch__space-enormous(data-toggleVal= vals[i])
                     .switch__indicator
             - else 
-                .switch__toggle
+                .switch__toggle(data-toggleVal= vals[i])
                     .switch__indicator
 
 mixin createCheckGroup(quantity, startId, spaced, ...activeNumbers )

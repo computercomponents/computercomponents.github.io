@@ -57,6 +57,12 @@
 .content {
     &__p {
         font-size: 1.3em;
+        text-indent: 30px;
+        margin-top: 15px;
+        &::first-letter {
+            color: @moderateBlue;
+            font-size: 1.6em;
+        }
     }
     &__topicStart {
         background: linear-gradient(to right, @moderateBlue, @darkPurple 50%, @moderateBlue);
@@ -64,15 +70,29 @@
         align-items: center;
         border-radius: 10px;
         margin-top: 30px;
+        margin-bottom: 20px;
         padding-top: 15px;
         padding-bottom: 15px;
     }
     &__title {
         text-align: center;
-        color: @mainColor;
         font-size: 2.3em;
         margin-left: 15px;
         margin-right: 15px;
+        &-white {
+            color: @mainColor;
+        }
+        &-smaller {
+            font-size: 2.1em;
+            width: 90%;
+            margin: 0 auto;
+        }
+        &-marg {
+            margin-top: 20px;
+        }
+        &-bordered {
+            border-bottom: 2px dashed @darkGrey;
+        }
     }
     &__topicLine {
         height: 6px;
@@ -84,5 +104,10 @@
         &-right {
             margin-left: 20px;
         }
+    }
+    &__stageContainer {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: -40px;
     }
 }
