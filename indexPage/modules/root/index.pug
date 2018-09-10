@@ -18,7 +18,7 @@ body.page
                     a(href="dataAndCoolingSystem.html") Подсистема хранения данных и охлаждение
                 li.header__navRef 
                     a(href="ioSystem.html") Периферийная система
-            h1.header__title Добро пожаловать на сайт по подбору компьютерных комплектующих!
+            h1.header__title Мы поможем Вам собрать компьютер мечты!
         .page__content.content
             p.content__p Давно хотели собрать производительный компьютер, но цены на готовые решения в магазинах кусаются?
                 |  Тогда вы обратились по адресу!
@@ -118,7 +118,7 @@ body.page
             .content__topicStart
                 .content__topicLine.content__topicLine-left
                 +createElement("","arrowButtons__button","toRight","enabled")
-                h2.content__title.content__title-white Сложно! Долго! Поможете?
+                h2.content__title.content__title-white Все ещё нужна помощь?
                 +createElement("","arrowButtons__button","toLeft","enabled")
                 .content__topicLine.content__topicLine-right
             
@@ -139,6 +139,12 @@ body.page
         h4.content__title.content__title-smaller.content__title-marg Хотите узнать еще больше о нас?
         p.content__p А мы только рады! Вот что случилось с нами в последнее время:
         .content__newsBox
-            +createNews("out/news/img/demo.jpg","Шрифты пали в схватке с багами!", "10 сентября 2018", `Группа ученых
-            поздно ночью обнаружила проблему с шрифтами в календаре и недоумеевают как такое могло произойти.
-            Будем надеяться, им удастся узнать причину, объявим же минуту молчания в честь павших букв!`)
+            .content__newsInstance
+                +createNews("out/news/img/demo.jpg","Устаревшие видеоускорители за бесценок!", "10 сентября 2018", `В связи с
+                 массовым переходом на видеокарты нового поколения, линейки gtx-600 и ниже обойдутся Вам на 30% дешевле!
+                 Спешите, количество видеокарт ограничено! Особенно актуально для пользователей, которые не заинтересованы в
+                 высокой производительности графического чипа`, 50, 40)
+            .content__newsInstance
+                +createNews("out/news/img/cpu.jpg","Обновилось пособие по выбору центрального процессора!", "8 сентября 2018", 
+                `Вас все еще пугает кэш процессора, технологии схожие с HyperThreading, непонятные инструкции?
+                Недоумеваете от того, как можно РАЗОГНАТЬ Ваш CPU? Тогда эта статья для Вас...`, 40, 60)

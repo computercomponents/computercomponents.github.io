@@ -97,11 +97,15 @@ mixin createRadioGroup(quantity, activeNumber, startId, spaced, ...vals)
             input.switch__input(type= "radio", id= currentId, name= groupName)
         label.switch__label(for= currentId)
             - if(spaced && (i!=(quantity - 1)))
-                .switch__toggle.switch__space-enormous(data-toggleVal= vals[i])
-                    .switch__indicator
+                .switch__tickContainer 
+                    .switch__toggle
+                        .switch__indicator
+                    .switch__description.switch__space-enormous #{vals[i]}
             - else 
-                .switch__toggle(data-toggleVal= vals[i])
-                    .switch__indicator
+                .switch__tickContainer 
+                    .switch__toggle
+                        .switch__indicator
+                    .switch__description #{vals[i]}
 
 mixin createCheckGroup(quantity, startId, spaced, descriptions, ...activeNumbers )
     - for(var i = 0; i < quantity; i++)
@@ -120,21 +124,23 @@ mixin createCheckGroup(quantity, startId, spaced, descriptions, ...activeNumbers
                     .switch__tickBox
                     .switch__description  #{descriptions[i]}
 
-mixin createNews(imgSrc, header, date, details)
+mixin createNews(imgSrc, header, date, details, deltaX, deltaY)
+    - var locStyle = "object-position: " + deltaX +"% " + deltaY +"%";
     .news 
-        img.news__img(src= imgSrc)
+        img.news__img(src= imgSrc style= locStyle)
         .news__content
             .news__header #{header}
             .news__date #{date}
             .news__details #{details}
 
 
-mixin createEvent(imgSrc, day, month, title, details, isLastInBlock = true)
+mixin createEvent(imgSrc, day, month, title, details, deltaX, deltaY, isLastInBlock = false)
     - var classes = "event"
+    - var locStyle = "object-position: " + deltaX +"% " + deltaY +"%";
     - if(isLastInBlock)
         - classes += " event__lastInBlock";
     div(class= classes)
-        img.news__img.event__img(src= imgSrc)
+        img.news__img.event__img(src= imgSrc style= locStyle)
         .news__content.event__content
             .event__date
                 span.event__day #{day}

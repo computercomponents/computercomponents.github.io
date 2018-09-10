@@ -136,10 +136,10 @@
 }
 .header__title {
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
   font-family: "LatoBlack", Arial, Helvetica, sans-serif;
-  line-height: 90%;
+  line-height: 120%;
   font-size: 2.8em;
 }
 .content__p {
@@ -215,12 +215,31 @@
   max-width: 350px;
   margin: 0 auto;
   margin-top: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .content__newsBox {
+  width: calc(100% - 2*15px);
+  margin-left: -15px;
+  margin-right: -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 35px;
+}
+.content__newsInstance {
+  margin-left: 15px;
+  margin-right: 15px;
   max-width: 400px;
-  margin: 0 auto;
-  margin-top: 20px;
 }
 .lightGreen {
   background-color: #4eb7a8;
@@ -345,8 +364,6 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 .page {
   background: linear-gradient(135deg, #def7fe, #b6effa 50%, #def7fe);
@@ -869,25 +886,25 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .switch__toggle {
   position: relative;
-  width: 130px;
-  height: 30px;
-  border-radius: 15px;
+  width: 60px;
+  height: 24px;
+  border-radius: 12px;
   background-color: #c0c0c0;
   -webkit-transition: background-color ease-in-out 0.6s;
   transition: background-color ease-in-out 0.6s;
 }
 .switch__toggle:before {
-  content: attr(data-toggleVal);
-  -webkit-transform: translateX(28.4px);
-      -ms-transform: translateX(28.4px);
-          transform: translateX(28.4px);
+  content: "off";
+  -webkit-transform: translateX(26.48px);
+      -ms-transform: translateX(26.48px);
+          transform: translateX(26.48px);
 }
 .switch__toggle:after {
-  content: attr(data-toggleVal);
+  content: "on";
   opacity: 0;
-  -webkit-transform: translateX(65px);
-      -ms-transform: translateX(65px);
-          transform: translateX(65px);
+  -webkit-transform: translateX(30px);
+      -ms-transform: translateX(30px);
+          transform: translateX(30px);
 }
 .switch__toggle:before,
 .switch__toggle:after {
@@ -896,7 +913,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   transition: opacity ease-in-out 0.6s, transform ease-in-out 0.6s;
   transition: opacity ease-in-out 0.6s, transform ease-in-out 0.6s, -webkit-transform ease-in-out 0.6s;
   color: #ffffff;
-  line-height: 30px;
+  line-height: 24px;
   top: 0;
   bottom: 0;
   position: absolute;
@@ -920,29 +937,29 @@ input.switch__input:checked + .switch__label .switch__toggle:after {
           transform: translateX(12px);
 }
 .switch__indicator {
-  width: 20.4px;
-  height: 20.4px;
+  width: 18.48px;
+  height: 18.48px;
   background-color: #ffffff;
   border-radius: 50%;
   position: absolute;
-  top: 3.9px;
-  -webkit-transform: translateX(5px);
-      -ms-transform: translateX(5px);
-          transform: translateX(5px);
+  top: 3.12px;
+  -webkit-transform: translateX(3px);
+      -ms-transform: translateX(3px);
+          transform: translateX(3px);
   -webkit-transition: -webkit-transform ease-in-out 0.6s;
   transition: -webkit-transform ease-in-out 0.6s;
   transition: transform ease-in-out 0.6s;
   transition: transform ease-in-out 0.6s, -webkit-transform ease-in-out 0.6s;
 }
 input.switch__input:checked + .switch__label .switch__toggle .switch__indicator {
-  -webkit-transform: translateX(104.6px);
-      -ms-transform: translateX(104.6px);
-          transform: translateX(104.6px);
+  -webkit-transform: translateX(38.52px);
+      -ms-transform: translateX(38.52px);
+          transform: translateX(38.52px);
 }
 .switch__tickBox {
   position: relative;
-  height: 28.5px;
-  width: 28.5px;
+  height: 22.8px;
+  width: 22.8px;
   border-radius: 50%;
   background-color: #e5e5e5;
   -webkit-transition: background-color ease-in-out 0.6s;
@@ -962,15 +979,15 @@ input.switch__input:checked + .switch__label .switch__toggle .switch__indicator 
 }
 .switch__tickBox:before {
   width: 4px;
-  -webkit-transform: translateY(17.7px) translateX(9.6px) rotate(225deg);
-      -ms-transform: translateY(17.7px) translateX(9.6px) rotate(225deg);
-          transform: translateY(17.7px) translateX(9.6px) rotate(225deg);
+  -webkit-transform: translateY(14.16px) translateX(7.68px) rotate(225deg);
+      -ms-transform: translateY(14.16px) translateX(7.68px) rotate(225deg);
+          transform: translateY(14.16px) translateX(7.68px) rotate(225deg);
 }
 .switch__tickBox:after {
   width: 12px;
-  -webkit-transform: translateY(17.7px) translateX(9.6px) rotate(-45deg);
-      -ms-transform: translateY(17.7px) translateX(9.6px) rotate(-45deg);
-          transform: translateY(17.7px) translateX(9.6px) rotate(-45deg);
+  -webkit-transform: translateY(14.16px) translateX(7.68px) rotate(-45deg);
+      -ms-transform: translateY(14.16px) translateX(7.68px) rotate(-45deg);
+          transform: translateY(14.16px) translateX(7.68px) rotate(-45deg);
 }
 input.switch__input:checked + .switch__label .switch__tickBox {
   background-color: #4eb7a8;
@@ -1112,6 +1129,7 @@ input.switch__input:checked + .switch__label .switch__description {
 }
 .location__img {
   border-radius: 3px 3px 0 0;
+  min-height: 150px;
   max-height: 205px;
   width: 100%;
   -o-object-fit: none;
@@ -1479,7 +1497,7 @@ input.switch__input:checked + .switch__label .switch__description {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 43px;
-  padding-top: 4.5px;
+  padding-top: 8px;
   letter-spacing: -0.7px;
   position: relative;
 }
@@ -1541,11 +1559,11 @@ input.switch__input:checked + .switch__label .switch__description {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "LatoBlack", Arial, sans-serif;
-  font-size: 8.5px;
+  font-size: 12px;
   letter-spacing: 0.8px;
   width: calc(100%/7 - 2*0.5px);
   margin: 0 0.5px;
-  padding-top: 10px;
+  padding-top: 8px;
   -webkit-transform: translateX(-1px) scaleY(0.9);
       -ms-transform: translateX(-1px) scaleY(0.9);
           transform: translateX(-1px) scaleY(0.9);

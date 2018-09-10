@@ -1,10 +1,10 @@
 @import "../projectShare/common.less";
 
 @transitionTime: 0.6s;
-@toggleHeight: 30px;
-@toggleWidth: 130px;
-@indicatorRatio: 0.68;
-@indicatorMargin: 5px;
+@toggleHeight: 24px;
+@toggleWidth: 60px;
+@indicatorRatio: 0.77;
+@indicatorMargin: 3px;
 
 .switch {
     margin-left: 16px;
@@ -52,11 +52,11 @@
         background-color: @mediumLighterGrey;
         transition: background-color ease-in-out @transitionTime;
         &:before {
-            content: attr(data-toggleVal);
+            content: "off";
             transform: translateX(@toggleHeight*@indicatorRatio + 8px);
         }
         &:after {
-            content: attr(data-toggleVal);
+            content: "on";
             opacity: 0;
             transform: translateX(@toggleWidth/2);
            
