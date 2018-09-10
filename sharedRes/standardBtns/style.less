@@ -1,0 +1,166 @@
+@import "../projectShare/common.less";
+@darkGreenShadow: rgb(40,162,144);
+@darkestGreenShadow: rgb(55,146,133);
+@darkRedShadow: rgb(191,62,31);
+@greenGradientStart: rgb(130, 203, 193);
+@redGradientStart: rgb(237, 136, 112);
+
+@shadow: 1px;
+@bigShadow: 2px;
+@border: 0.5px;
+@bigBorder: 0.5px;
+
+@deltahHeight: 10px;
+@marginTop: 20px;
+@smallHeight: 22px;
+
+
+.standardButtons {
+    margin-left: 11%;
+    margin-right: 10.7%;
+    margin-top: 50px;
+    margin-bottom: 55px;
+    display: flex;
+    flex-direction: column;
+
+    &__elem:nth-child(3) &__button {
+        transform: translateX(-2px);
+    } 
+    &__clickBox {
+        display: none;
+    }
+
+    &__container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    &__button {
+        cursor: pointer;
+        text-align: center;
+        font-family: "LatoBlack", Arial, sans-serif;
+        border-radius: @roundBorder;
+        color: @mainColor;
+        @btn: ~".standardButtons__button";
+        box-sizing: border-box;
+        .fontSize3();
+        &-small{
+            letter-spacing: 0.5px;
+            .fontSize1();
+            width: 78px;
+            line-height: @smallHeight;
+            @{btn}-success@{btn}-shadow& {
+                box-shadow: 0 (@shadow+1) 0 0 @darkGreenShadow;
+            }
+            @{btn}-warning@{btn}-shadow& {
+                box-shadow: 0 (@shadow+1) 0 0 @darkRedShadow;
+            }
+            @{btn}-inContainer& {
+                margin-top: @marginTop + @deltahHeight;
+            }
+            @{btn}-inContainerHigher& {
+                margin-top: @marginTop + @deltahHeight + 2.5px;
+            }
+        }
+        &-big {
+            letter-spacing: 0.8px;
+            width: 118px;
+            transform: translate(-1px);
+            line-height: @smallHeight + @deltahHeight;
+            @{btn}-success@{btn}-shadow& {
+                box-shadow: 0 (@bigShadow+1) 0 0 @darkGreenShadow;
+            }
+            @{btn}-warning@{btn}-shadow& {
+                box-shadow: 0 (@bigShadow+1) 0 0 @darkRedShadow;
+            }
+            @{btn}-inContainer& {
+                margin-top: @marginTop;
+            }
+            @{btn}-inContainerHigher& {
+                margin-top: @marginTop + 2px;
+            }
+            &:not(@{btn}-grad) .element__inner {
+                display: inline-block;
+                transform: translateY(1px) scaleY(1.1);
+            }
+        }
+
+        &-success {
+           background-color: @lightGreen;
+           @{btn}-empty& {
+               color: @lightGreen;
+           }
+       }
+        &-warning {
+            background-color: @red;
+            @{btn}-empty& {
+                color: @red;
+            }
+        }
+        &-empty {
+            background-color: @mainColor;
+            @{btn}-small& {
+                border: @border solid;
+                height: @smallHeight;
+                box-shadow: 0 (@shadow + 1px) 0 0;
+            }
+            @{btn}-big& {
+                height: @smallHeight + @deltahHeight;
+                border: @bigBorder solid;
+                box-shadow: 0 (@bigShadow + 1px) 0 0;
+            }
+        }
+        &-success&-darkGreen {
+            box-shadow: 0 (@shadow + 1px) 0 0 @darkGreenShadow;
+        }
+        &-success&-darkestGreen {
+            box-shadow: 0 (@bigShadow + 0.5px) 0 0 @darkestGreenShadow;
+        }
+
+        .fullPseudo() {
+            content: "Button";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            transition: opacity ease-in-out 0.6s;
+            border-radius: @roundBorder;
+        }
+
+        &-grad {
+        position: relative;
+           &1 {
+               &:before {
+                   .fullPseudo();
+                   background: radial-gradient(circle 25px at 36% 80%, @greenGradientStart 100%, @lightGreen);
+               }
+           }
+
+           &2 {
+                &:before {
+                    .fullPseudo();
+                    background: radial-gradient(circle 25px at 50% 50%, @greenGradientStart 100%, @lightGreen); 
+                }
+            }
+
+            &3 {
+                &:before {
+                    .fullPseudo();
+                    background: radial-gradient(circle 24.5px at 72% 50%, @redGradientStart 100%, @red); 
+                }      
+            }
+
+            &4 {
+                &:before {
+                    .fullPseudo();
+                    background: radial-gradient(circle 25px at 92% 83%, @redGradientStart 100%, @red); 
+                }
+            }
+        }
+        input:checked + label &:before {
+            opacity: 1;
+        }
+    }
+}

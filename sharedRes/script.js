@@ -5,6 +5,9 @@ try {
     req.keys().forEach((key) => req(key)); 
 } catch(ex) {} 
 
+req = require.context("./standardBtns", true, /\.less$/im);
+req.keys().forEach((key) => req(key));
+
 req = require.context("./arrowBtns", true, /\.less$/im);
 req.keys().forEach((key) => req(key));
 
@@ -22,5 +25,9 @@ req.keys().forEach((key) => req(key));
 
 req = require.context("./news", true, /\.less$/im);
 req.keys().forEach((key) => req(key));
+
+req = require.context("./events", true, /\.less$/im);
+req.keys().forEach((key) => req(key));
+
 
 import media from "./projectShare/media.less"; // <---must be imported as last as possible

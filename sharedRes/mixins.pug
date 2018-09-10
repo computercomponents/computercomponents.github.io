@@ -87,7 +87,7 @@ mixin createStageChart(progress, startId = 1, elemClass = "warning", maximum = 5
     .stageChart__scale
     .stageChart__progress.stageChart__progress-warning
 
-mixin createRadioGroup(quantity, activeNumber, startId, spaced, ...vals)
+mixin createRadioGroup(quantity, activeNumber, startId, ...vals)
     - var groupName = "RG#" + startId
     - for(var i = 0; i < quantity; i++)
         - var currentId = "CRG_" + startId + "_" + i
@@ -96,18 +96,12 @@ mixin createRadioGroup(quantity, activeNumber, startId, spaced, ...vals)
         - else
             input.switch__input(type= "radio", id= currentId, name= groupName)
         label.switch__label(for= currentId)
-            - if(spaced && (i!=(quantity - 1)))
-                .switch__tickContainer 
-                    .switch__toggle
-                        .switch__indicator
-                    .switch__description.switch__space-enormous #{vals[i]}
-            - else 
-                .switch__tickContainer 
-                    .switch__toggle
-                        .switch__indicator
-                    .switch__description #{vals[i]}
+            .switch__tickContainer 
+                .switch__toggle
+                    .switch__indicator
+                .switch__description #{vals[i]}
 
-mixin createCheckGroup(quantity, startId, spaced, descriptions, ...activeNumbers )
+mixin createCheckGroup(quantity, startId, descriptions, ...activeNumbers )
     - for(var i = 0; i < quantity; i++)
         - var currentId = "CG_" + startId + "_" + i
         - if( activeNumbers.includes(i+1) )
@@ -115,14 +109,9 @@ mixin createCheckGroup(quantity, startId, spaced, descriptions, ...activeNumbers
         - else
             input.switch__input(type= "checkbox", id= currentId)
         label.switch__label(for= currentId)
-            - if(spaced && (i!=(quantity - 1)))
-                .switch__tickContainer
-                    .switch__tickBox
-                    .switch__description.switch__space-extreme #{descriptions[i]}
-            - else
-                .switch__tickContainer 
-                    .switch__tickBox
-                    .switch__description  #{descriptions[i]}
+            .switch__tickContainer
+                .switch__tickBox
+                .switch__description #{descriptions[i]}
 
 mixin createNews(imgSrc, header, date, details, deltaX, deltaY)
     - var locStyle = "object-position: " + deltaX +"% " + deltaY +"%";

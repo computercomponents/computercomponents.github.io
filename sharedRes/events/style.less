@@ -1,0 +1,50 @@
+@import "../projectShare/common.less";
+
+.event {
+    margin-left: @rowMarginRight;
+    background-color: @lightGreen;
+    border-radius: @roundBorder;
+    position: relative;
+    &__date {
+        margin-top: -10px;
+    }
+    &__day {
+        .fontSize11();
+        line-height: 100%;
+        letter-spacing: -3px;
+        margin-left: -3px;
+        margin-right: 15px;
+    }
+    &__month {
+        .fontSize8();
+    }
+    &__title {
+        text-transform: uppercase;
+        font-family: "LatoBlack", Arial, sans-serif;
+        .fontSize3Half();
+        letter-spacing: 0.7px;
+        margin-top: 14px;
+        margin-bottom: 3px;
+        margin-left: -2px;
+        transform: scaleY(0.9);
+    }
+    &__content &__button {
+        width: 87%;
+        letter-spacing: 0.6px;
+        word-spacing: 2px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 19px;
+        margin-bottom: -10px;
+        padding-top: 1px;
+        text-transform: uppercase;
+        border-radius: 1.5*@roundBorder;
+        height: 24px;
+    }
+    &__img {
+        object-position: 81% 15%;
+    }
+    &__lastInBlock {
+        margin-bottom: 48px;
+    }
+}

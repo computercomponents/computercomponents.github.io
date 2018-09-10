@@ -98,6 +98,50 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ind
 
 /***/ }),
 
+/***/ "./indexPage/modules/events sync recursive \\.less$/i":
+/*!*************************************************!*\
+  !*** ./indexPage/modules/events sync \.less$/i ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("function webpackEmptyContext(req) {\n\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\te.code = 'MODULE_NOT_FOUND';\n\tthrow e;\n}\nwebpackEmptyContext.keys = function() { return []; };\nwebpackEmptyContext.resolve = webpackEmptyContext;\nmodule.exports = webpackEmptyContext;\nwebpackEmptyContext.id = \"./indexPage/modules/events sync recursive \\\\.less$/i\";\n\n//# sourceURL=webpack:///./indexPage/modules/events_sync_\\.less$/i?");
+
+/***/ }),
+
+/***/ "./indexPage/modules/events/img sync recursive \\.(?:png|jpe?g|gif|tiff)$/i":
+/*!***********************************************************************!*\
+  !*** ./indexPage/modules/events/img sync \.(?:png|jpe?g|gif|tiff)$/i ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var map = {\n\t\"./money.png\": \"./indexPage/modules/events/img/money.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tvar id = map[req];\n\tif(!(id + 1)) { // check for number or string\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn id;\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./indexPage/modules/events/img sync recursive \\\\.(?:png|jpe?g|gif|tiff)$/i\";\n\n//# sourceURL=webpack:///./indexPage/modules/events/img_sync_\\.(?");
+
+/***/ }),
+
+/***/ "./indexPage/modules/events/img/money.png":
+/*!************************************************!*\
+  !*** ./indexPage/modules/events/img/money.png ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"\\\\events\\\\img\\\\money.png\";\n\n//# sourceURL=webpack:///./indexPage/modules/events/img/money.png?");
+
+/***/ }),
+
+/***/ "./indexPage/modules/events/script.js":
+/*!********************************************!*\
+  !*** ./indexPage/modules/events/script.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("let req;\r\ntry {\r\n    req = __webpack_require__(\"./indexPage/modules/events/img sync recursive \\\\.(?:png|jpe?g|gif|tiff)$/i\");\r\n    req.keys().forEach((key) => req(key)); \r\n} catch(ex) {} // no img in this module\r\n\r\nreq = __webpack_require__(\"./indexPage/modules/events sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\n\n//# sourceURL=webpack:///./indexPage/modules/events/script.js?");
+
+/***/ }),
+
 /***/ "./indexPage/modules/location sync recursive \\.less$/i":
 /*!***************************************************!*\
   !*** ./indexPage/modules/location sync \.less$/i ***!
@@ -150,7 +194,7 @@ eval("let req;\r\ntry {\r\n    req = __webpack_require__(\"./indexPage/modules/l
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _root_script_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./root/script.js */ \"./indexPage/modules/root/script.js\");\n/* harmony import */ var _root_script_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_root_script_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _location_script_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./location/script.js */ \"./indexPage/modules/location/script.js\");\n/* harmony import */ var _location_script_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_location_script_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _news_script_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./news/script.js */ \"./indexPage/modules/news/script.js\");\n/* harmony import */ var _news_script_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_news_script_js__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\n\n//# sourceURL=webpack:///./indexPage/modules/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _root_script_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./root/script.js */ \"./indexPage/modules/root/script.js\");\n/* harmony import */ var _root_script_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_root_script_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _location_script_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./location/script.js */ \"./indexPage/modules/location/script.js\");\n/* harmony import */ var _location_script_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_location_script_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _news_script_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./news/script.js */ \"./indexPage/modules/news/script.js\");\n/* harmony import */ var _news_script_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_news_script_js__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _events_script_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./events/script.js */ \"./indexPage/modules/events/script.js\");\n/* harmony import */ var _events_script_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_events_script_js__WEBPACK_IMPORTED_MODULE_3__);\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./indexPage/modules/main.js?");
 
 /***/ }),
 
@@ -297,6 +341,28 @@ eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sh
 
 /***/ }),
 
+/***/ "./sharedRes/events sync recursive \\.less$/i":
+/*!*****************************************!*\
+  !*** ./sharedRes/events sync \.less$/i ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var map = {\n\t\"./style.less\": \"./sharedRes/events/style.less\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tvar id = map[req];\n\tif(!(id + 1)) { // check for number or string\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn id;\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./sharedRes/events sync recursive \\\\.less$/i\";\n\n//# sourceURL=webpack:///./sharedRes/events_sync_\\.less$/i?");
+
+/***/ }),
+
+/***/ "./sharedRes/events/style.less":
+/*!*************************************!*\
+  !*** ./sharedRes/events/style.less ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sharedRes/events/style.less?");
+
+/***/ }),
+
 /***/ "./sharedRes/fonts sync recursive \\.(?:eot|svg|ttf|woff)$/i":
 /*!********************************************************!*\
   !*** ./sharedRes/fonts sync \.(?:eot|svg|ttf|woff)$/i ***!
@@ -437,7 +503,7 @@ eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sh
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _commonStyles_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./commonStyles.less */ \"./sharedRes/commonStyles.less\");\n/* harmony import */ var _commonStyles_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_commonStyles_less__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _projectShare_media_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./projectShare/media.less */ \"./sharedRes/projectShare/media.less\");\n/* harmony import */ var _projectShare_media_less__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_projectShare_media_less__WEBPACK_IMPORTED_MODULE_1__);\n\r\nlet req;\r\ntry {\r\n    req = __webpack_require__(\"./sharedRes/fonts sync recursive \\\\.(?:eot|svg|ttf|woff)$/i\");\r\n    req.keys().forEach((key) => req(key)); \r\n} catch(ex) {} \r\n\r\nreq = __webpack_require__(\"./sharedRes/arrowBtns sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/stages sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/switches sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/location sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/calendar sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/news sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\n // <---must be imported as last as possible\n\n//# sourceURL=webpack:///./sharedRes/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _commonStyles_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./commonStyles.less */ \"./sharedRes/commonStyles.less\");\n/* harmony import */ var _commonStyles_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_commonStyles_less__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _projectShare_media_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./projectShare/media.less */ \"./sharedRes/projectShare/media.less\");\n/* harmony import */ var _projectShare_media_less__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_projectShare_media_less__WEBPACK_IMPORTED_MODULE_1__);\n\r\nlet req;\r\ntry {\r\n    req = __webpack_require__(\"./sharedRes/fonts sync recursive \\\\.(?:eot|svg|ttf|woff)$/i\");\r\n    req.keys().forEach((key) => req(key)); \r\n} catch(ex) {} \r\n\r\nreq = __webpack_require__(\"./sharedRes/standardBtns sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/arrowBtns sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/stages sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/switches sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/location sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/calendar sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/news sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/events sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\n\r\n // <---must be imported as last as possible\n\n//# sourceURL=webpack:///./sharedRes/script.js?");
 
 /***/ }),
 
@@ -460,6 +526,28 @@ eval("var map = {\n\t\"./style.less\": \"./sharedRes/stages/style.less\"\n};\n\n
 /***/ (function(module, exports) {
 
 eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sharedRes/stages/style.less?");
+
+/***/ }),
+
+/***/ "./sharedRes/standardBtns sync recursive \\.less$/i":
+/*!***********************************************!*\
+  !*** ./sharedRes/standardBtns sync \.less$/i ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var map = {\n\t\"./style.less\": \"./sharedRes/standardBtns/style.less\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tvar id = map[req];\n\tif(!(id + 1)) { // check for number or string\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn id;\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./sharedRes/standardBtns sync recursive \\\\.less$/i\";\n\n//# sourceURL=webpack:///./sharedRes/standardBtns_sync_\\.less$/i?");
+
+/***/ }),
+
+/***/ "./sharedRes/standardBtns/style.less":
+/*!*******************************************!*\
+  !*** ./sharedRes/standardBtns/style.less ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sharedRes/standardBtns/style.less?");
 
 /***/ }),
 

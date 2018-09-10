@@ -1,6 +1,8 @@
 @import "../../../sharedRes/vars.less";
 @import "../../../sharedRes/projectShare/common.less";
 
+@darkBackground: rgba(48,29,21,0.85);
+
 .page {
     &__wrapper {
         max-width: 1200px;
@@ -9,19 +11,23 @@
         padding-right: 20px;
     }
 }
-.header {
-
+.header,.footer {
     width: 90%;
     margin: 0 auto;
+}
+.serviceBlock() {
+    background-color: @darkBackground;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15px;
+}
 
+.header {
     &__navigation {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
-        background-color: rgb(48,29,21);
-        padding-left: 15px;
-        padding-right: 15px;
-        border-radius: 15px;
+        .serviceBlock();
     }
     
     &__navRef {
@@ -40,7 +46,7 @@
         @media (max-width: 1100px) {
             width: 50%;
         }
-        @media (max-width: 700px) {
+        @media (max-width: @mobileWidth) {
             width: 100%;
         }
     }
@@ -111,6 +117,10 @@
         width: 80%;
         margin: 0 auto;
         margin-bottom: -40px;
+        @media (max-width: @mobileWidth) {
+            width: 95%;
+            margin-bottom: -20px;
+        }
     }
     &__locationBox {
         max-width: 595px;
@@ -126,7 +136,6 @@
     }
     @newsMargin: 15px;
     &__newsBox {
-       width: calc(100% - 2*@newsMargin);
        margin-left: -@newsMargin;
        margin-right: -@newsMargin;
        display: flex;
@@ -136,8 +145,23 @@
        margin-top: 35px;
     }
     &__newsInstance {
-        margin-left: @newsMargin;
-        margin-right: @newsMargin;
         max-width: 400px;
+        margin: 0 auto;
+        &Box {
+            margin-left: @newsMargin;
+            margin-right: @newsMargin;
+            width: calc(50% - 2*@newsMargin);
+            margin-bottom: 35px;
+            @media (max-width: @mobileWidth) {
+                width: calc(100% - 2*@newsMargin);
+            }
+        }
     }
+}
+.footer {
+    .serviceBlock();
+    color: @creamColor;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
 }
