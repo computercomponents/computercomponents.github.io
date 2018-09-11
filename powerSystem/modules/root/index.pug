@@ -1,1 +1,17 @@
-p Welcome to the page where you can know about power system of your future computer!
+include ../../../sharedRes/mixins
+
+head
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title Главная
+    link(rel="stylesheet", href="out/styles.css")
+body.page
+    .page__wrapper
+        .page__header.header
+            ul.header__navigation.header__navigation-sidePage
+                li.header__navRef
+                    +createElement("","arrowButtons__button","toRight","borderOnly") 
+                    a(href="index.html") На главную
+                    +createElement("","arrowButtons__button","toLeft","borderOnly") 
+            h1.header__title Выбираем компоненты системы питания компьютера

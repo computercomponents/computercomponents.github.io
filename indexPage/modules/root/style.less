@@ -28,18 +28,30 @@
         flex-flow: row wrap;
         justify-content: space-between;
         .serviceBlock();
+        &-sidePage {
+            justify-content: center;
+            width: 50%;
+            margin: 0 auto;
+            @media (max-width: @mobileWidth) {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
     }
     
     &__navRef {
         margin-top: 15px;
         margin-bottom: 15px;
         font-size: 1.1em;
-        text-align: center;
+        display: flex;
+        align-items: center;
         a, a:visited, a:active {
             color: @creamColor;
             font-family: "LatoLight", Arial, Helvetica, sans-serif;
         }
         a:hover {
+            margin-bottom: -1px;
             border-bottom: dashed 1px @creamColor;
         }
         color: @creamColor;
