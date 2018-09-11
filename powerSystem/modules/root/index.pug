@@ -4,14 +4,44 @@ head
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
-    title Главная
+    title Подсистема питания
     link(rel="stylesheet", href="out/styles.css")
 body.page
     .page__wrapper
         .page__header.header
             ul.header__navigation.header__navigation-sidePage
-                li.header__navRef
-                    +createElement("","arrowButtons__button","toRight","borderOnly") 
+                li.header__navRef.header__navRef-sidePage
+                    .content__topicLine.content__topicLine-left.content__topicLine-green
+                    +createElement("","arrowButtons__button","toRight","borderOnly","small","margL") 
                     a(href="index.html") На главную
-                    +createElement("","arrowButtons__button","toLeft","borderOnly") 
+                    +createElement("","arrowButtons__button","toLeft","borderOnly","small","margR") 
+                    .content__topicLine.content__topicLine-right.content__topicLine-green
             h1.header__title Выбираем компоненты системы питания компьютера
+
+        .mainContent
+            .page__leftBlock.sidePageBlock.sidePageBlock-left
+                .sidePageBlock__title.sidePageBlock__title-left Это интересно
+                ul.sidePageBlock__facts
+                    li.sidePageBlock__fact Нынешние платы поддерживают работу с несколькими процессорами. 
+                        | На их основе можно создавать производительные серверы, пользоваться одновременно 
+                        | многими портами USB, смотреть видео высокого разрешения, 
+                        | играть в игры с великолепной трехмерной графикой.
+                    li.sidePageBlock__fact На левой стороне материнской платы (на стороне, которая оказывается сзади компьютера)
+                        |  расположены интерфейсы для подключения монитора, клавиатуры, мыши, колонок, сетевого кабеля
+                        | и других устройств. Все современные материнские платы имеют несколько портов USB, 
+                        | которые позволяют подключать флешки, принтеры, видеокамеры и прочие устройства.
+                    li.sidePageBlock__fact Основной базой, фундаментом, подложкой МП является многослойный текстолит, 
+                        | на котором расположены различные конденсаторы, транзисторы, дорожки для обмена данными 
+                        | и прочие электротехнические элементы. Дорожки располагаются на слоях текстолита, а для их сообщения 
+                        | в последних проделаны специальные отверстия. Современные материнские платы могут содержать до 10-15 слоев. 
+
+            .page__middleBlock.sidePageBlock.sidePageBlock-middle
+                .content__topicStart
+                    .content__topicLine.content__topicLine-left
+                    +createElement("","arrowButtons__button","toRight","enabled")
+                    h2.content__title.content__title-white Немного теории
+                    +createElement("","arrowButtons__button","toLeft","enabled")
+                    .content__topicLine.content__topicLine-right
+
+            .page__rightBlock.sidePageBlock.sidePageBlock-right
+                .sidePageBlock__title.sidePageBlock__title-right Наши спонсоры рекомендуют:

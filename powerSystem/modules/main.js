@@ -1,0 +1,1 @@
+import indexRoot from "./root/script.js";

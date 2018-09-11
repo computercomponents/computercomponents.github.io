@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _indexPage_modules_main_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./indexPage/modules/main.js */ \"./indexPage/modules/main.js\");\n/* harmony import */ var _sharedRes_script_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sharedRes/script.js */ \"./sharedRes/script.js\");\n\r\n\r\n\n\n//# sourceURL=webpack:///./entry.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _indexPage_modules_main_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./indexPage/modules/main.js */ \"./indexPage/modules/main.js\");\n/* harmony import */ var _powerSystem_modules_main_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./powerSystem/modules/main.js */ \"./powerSystem/modules/main.js\");\n/* harmony import */ var _sharedRes_script_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sharedRes/script.js */ \"./sharedRes/script.js\");\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./entry.js?");
 
 /***/ }),
 
@@ -283,6 +283,51 @@ eval("let req;\r\ntry {\r\n    req = !(function webpackMissingModule() { var e =
 /***/ (function(module, exports) {
 
 eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./indexPage/modules/root/style.less?");
+
+/***/ }),
+
+/***/ "./powerSystem/modules/main.js":
+/*!*************************************!*\
+  !*** ./powerSystem/modules/main.js ***!
+  \*************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _root_script_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./root/script.js */ \"./powerSystem/modules/root/script.js\");\n/* harmony import */ var _root_script_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_root_script_js__WEBPACK_IMPORTED_MODULE_1__);\n\n\n//# sourceURL=webpack:///./powerSystem/modules/main.js?");
+
+/***/ }),
+
+/***/ "./powerSystem/modules/root sync recursive \\.less$/i":
+/*!*************************************************!*\
+  !*** ./powerSystem/modules/root sync \.less$/i ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var map = {\n\t\"./style.less\": \"./powerSystem/modules/root/style.less\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tvar id = map[req];\n\tif(!(id + 1)) { // check for number or string\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn id;\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./powerSystem/modules/root sync recursive \\\\.less$/i\";\n\n//# sourceURL=webpack:///./powerSystem/modules/root_sync_\\.less$/i?");
+
+/***/ }),
+
+/***/ "./powerSystem/modules/root/script.js":
+/*!********************************************!*\
+  !*** ./powerSystem/modules/root/script.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("let req;\r\ntry {\r\n    req = !(function webpackMissingModule() { var e = new Error(\"Cannot find module 'undefined'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\r\n    req.keys().forEach((key) => req(key)); \r\n} catch(ex) {} // no img in this module\r\n\r\nreq = __webpack_require__(\"./powerSystem/modules/root sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\n\n//# sourceURL=webpack:///./powerSystem/modules/root/script.js?");
+
+/***/ }),
+
+/***/ "./powerSystem/modules/root/style.less":
+/*!*********************************************!*\
+  !*** ./powerSystem/modules/root/style.less ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./powerSystem/modules/root/style.less?");
 
 /***/ }),
 
