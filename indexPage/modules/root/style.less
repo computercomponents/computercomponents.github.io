@@ -1,7 +1,6 @@
 @import "../../../sharedRes/vars.less";
 @import "../../../sharedRes/projectShare/common.less";
 
-@darkBackground: rgba(48,29,21,0.85);
 
 .page {
     &__wrapper {
@@ -14,12 +13,6 @@
 .header,.footer {
     width: 90%;
     margin: 0 auto;
-}
-.serviceBlock() {
-    background-color: @darkBackground;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 15px;
 }
 
 .header {
@@ -80,15 +73,32 @@
 }
 
 .content {
+    @firstLetterHeight: 2.6em;
     &__p {
-        //word-break: break-all;
         font-size: 1.3em;
-        text-indent: 30px;
-        margin-top: 15px;
+        position: relative;
+        min-height: @firstLetterHeight + 0.2em;
+        margin-top: 30px;
+        &-smallerMarg {
+            margin-top: -5px;
+        }
         &::first-letter {
-            color: @moderateBlue;
-            font-size: 1.6em;
-            border-bottom: 2px solid @moderateBlue;
+            color: @grey;
+            font-size: @firstLetterHeight;
+            text-shadow: 3px 4px 3px @grey;
+            float: left;
+            margin-right: 5px;
+            margin-top: -10px;
+            font-family: "LatoBlack", Arial, Helvetica, sans-serif;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            height: 2px;
+            background: linear-gradient(to right, @lightGrey, @darkGrey 50%, @lightGrey);
+            display: block;
+            width: 100%;
         }
     }
     &__topicStart {
@@ -96,8 +106,8 @@
         display: flex;
         align-items: center;
         border-radius: 10px;
-        margin-top: 30px;
-        margin-bottom: 20px;
+        margin-top: 40px;
+        margin-bottom: 40px;
         padding-top: 15px;
         padding-bottom: 15px;
     }
@@ -115,7 +125,7 @@
             margin: 0 auto;
         }
         &-marg {
-            margin-top: 20px;
+            margin-top: 40px;
         }
         &-bordered {
             border-bottom: 2px dashed @darkGrey;
@@ -139,10 +149,9 @@
     &__stageContainer {
         width: 80%;
         margin: 0 auto;
-        margin-bottom: -40px;
+        margin-bottom: -20px;
         @media (max-width: @mobileWidth) {
             width: 95%;
-            margin-bottom: -20px;
         }
     }
     &__locationBox {
@@ -180,12 +189,5 @@
             }
         }
     }
-}
-.footer {
-    .serviceBlock();
-    color: @creamColor;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
 }
 

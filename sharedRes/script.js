@@ -1,4 +1,5 @@
 import styles from "./commonStyles.less";
+import footer from "./footer/script.js";
 let req;
 try {
     req = require.context("./fonts", true, /\.(?:eot|svg|ttf|woff)$/im);

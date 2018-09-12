@@ -30,12 +30,12 @@ body.page
                 .content__topicLine.content__topicLine-right
             p.content__p Компьютер, удовлетворяющий потребности определенного пользователя может стоить и 30 000 рублей, 
                 | и более 150 000 р! Почему разброс цен такой огромный, почему неотличимые визуально 2 куска кремния
-                | могут разительно отличаться в стоимости? Попробуем разобраться.
+                | могут разительно отличаться в стоимости? Попробуем разобраться!
             p.content__p Разница в цене обусловлена, в основном, производительностью комлектующих и степенью комфорта работы
                 | . Также, как правило, дорогое "железо" имеет расширенный срок гарантийного обслуживания. Как не переплатить 
                 | деньги за ненужные конкретно Вам особенности и при этом иметь достойную производительность? Что ж...
 
-            h3.content__title.content__title-smaller.content__title-marg.content__title-bordered Шаг 1 - определите круг задач 
+            h3.content__title.content__title-smaller.content__title-marg.content__title-bordered Шаг 1 - Определите круг задач 
                 | для Вашего компьютера
             .content__stageContainer
                 +createStageChart(1)
@@ -51,7 +51,7 @@ body.page
                 .switch__container
                     +createRadioGroup(5,3,1,"Школьник","Студент", "Инженер", "Бухгалтер", "Геймер")
             
-            h3.content__title.content__title-smaller.content__title-marg.content__title-bordered Шаг 2 - определитесь с 
+            h3.content__title.content__title-smaller.content__title-marg.content__title-bordered Шаг 2 - Определитесь с 
                 | типоразмером Вашего компьютера
             .content__stageContainer
                 +createStageChart(2,2)
@@ -68,7 +68,7 @@ body.page
                 | от того, и цена на такие решения высока. Но и особо габаритные решения требуют много материалов для 
                 | изготовления. Подробнее о выборе охлаждения Вы сможете узнать из соответствующего раздела сайта.
             
-            h3.content__title.content__title-smaller.content__title-marg.content__title-bordered Шаг 3 - Как данные хранить будем?
+            h3.content__title.content__title-smaller.content__title-marg.content__title-bordered Шаг 3 - Поговорим о хранении данных
             .content__stageContainer
                 +createStageChart(3,3)
             
@@ -96,8 +96,7 @@ body.page
                 | вычислительного монстра, но комфорт использования ведь тоже важен, да? При плинаровании бюджета, учтите, что
                 | перефирия может оказаться дороже, чем Вы думаете
             
-            h3.content__title.content__title-smaller.content__title-marg.content__title-bordered Шаг 5 - Пора 
-                | платить разработчикам ПО...или?
+            h3.content__title.content__title-smaller.content__title-marg.content__title-bordered Шаг 5 - ПО тоже стоит денег
             .content__stageContainer
                 +createStageChart(5,5)
             p.content__p  Не забудьте, что истина кроется не только в hardware, но и в software. Современный софт, особенно 
@@ -123,13 +122,13 @@ body.page
                 .content__topicLine.content__topicLine-right
             
             p.content__p Конечно! Приезжайте к нам, и наши специалисты подберут идеальное железо под Ваши нужды, 
-                | переплата минимальная!
+                | стоимость наших услуг минимальна!
             
         .content__locationBox
             +createLocation("out/location/img/map.png", "Рай инженера", "Иркутский тракт","41", "Tomsk, Russian Federation",54,35)
         
-        h4.content__title.content__title-smaller.content__title-marg Особые предложения?
-        p.content__p Конечно, ведь мы всегда идём навстречу нашим дорогим клиентам, это то, что отличает нас от конкурентов! 
+        h4.content__title.content__title-smaller.content__title-marg Еще больше скидок!
+        p.content__p Мы всегда идём навстречу нашим дорогим клиентам, это то, что отличает нас от конкурентов! 
             |  Просто посмотрите на календарь ниже, наверняка совсем скоро будет особый день, когда наши услуги почти ничего
             |  не будут стоить Вам!
         
@@ -159,6 +158,4 @@ body.page
                     в разрешении не менее 720P, и "чтобы без единого разрыва". Т.к. желание клиента для нас закон, 
                     оснастили его компьютер четырьмя новыми Titax-X. И да сохранит Блок Питания 12 вольт на его линии...`, 58, 70)
 
-        .page__footer.footer 
-            .footer__info Сайт создан с применением новейших технологий, таких как HTML5 и CSS3. (C) Все права защищены 
-            .footer__info Мы благодарим GitHub Pages за любезно предоставленный домен
+            include ../../../sharedRes/footer/block

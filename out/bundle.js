@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _indexPage_modules_main_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./indexPage/modules/main.js */ \"./indexPage/modules/main.js\");\n/* harmony import */ var _powerSystem_modules_main_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./powerSystem/modules/main.js */ \"./powerSystem/modules/main.js\");\n/* harmony import */ var _sharedRes_script_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sharedRes/script.js */ \"./sharedRes/script.js\");\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./entry.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _indexPage_modules_main_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./indexPage/modules/main.js */ \"./indexPage/modules/main.js\");\n/* harmony import */ var _powerSystem_modules_main_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./powerSystem/modules/main.js */ \"./powerSystem/modules/main.js\");\n/* harmony import */ var _sharedRes_script_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sharedRes/script.js */ \"./sharedRes/script.js\");\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./entry.js?");
 
 /***/ }),
 
@@ -294,7 +294,7 @@ eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./in
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _root_script_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./root/script.js */ \"./powerSystem/modules/root/script.js\");\n/* harmony import */ var _root_script_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_root_script_js__WEBPACK_IMPORTED_MODULE_1__);\n\n\n//# sourceURL=webpack:///./powerSystem/modules/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _root_script_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./root/script.js */ \"./powerSystem/modules/root/script.js\");\n/* harmony import */ var _root_script_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_root_script_js__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack:///./powerSystem/modules/main.js?");
 
 /***/ }),
 
@@ -485,6 +485,39 @@ eval("module.exports = __webpack_require__.p + \"fonts/SourceRegular.ttf\";\n\n/
 
 /***/ }),
 
+/***/ "./sharedRes/footer sync recursive \\.less$/i":
+/*!*****************************************!*\
+  !*** ./sharedRes/footer sync \.less$/i ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var map = {\n\t\"./style.less\": \"./sharedRes/footer/style.less\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tvar id = map[req];\n\tif(!(id + 1)) { // check for number or string\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn id;\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./sharedRes/footer sync recursive \\\\.less$/i\";\n\n//# sourceURL=webpack:///./sharedRes/footer_sync_\\.less$/i?");
+
+/***/ }),
+
+/***/ "./sharedRes/footer/script.js":
+/*!************************************!*\
+  !*** ./sharedRes/footer/script.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("let req;\r\ntry {\r\n    req = !(function webpackMissingModule() { var e = new Error(\"Cannot find module 'undefined'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\r\n    req.keys().forEach((key) => req(key)); \r\n} catch(ex) {} // no img in this module\r\n\r\nreq = __webpack_require__(\"./sharedRes/footer sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\n\n//# sourceURL=webpack:///./sharedRes/footer/script.js?");
+
+/***/ }),
+
+/***/ "./sharedRes/footer/style.less":
+/*!*************************************!*\
+  !*** ./sharedRes/footer/style.less ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sharedRes/footer/style.less?");
+
+/***/ }),
+
 /***/ "./sharedRes/location sync recursive \\.less$/i":
 /*!*******************************************!*\
   !*** ./sharedRes/location sync \.less$/i ***!
@@ -548,7 +581,7 @@ eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sh
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _commonStyles_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./commonStyles.less */ \"./sharedRes/commonStyles.less\");\n/* harmony import */ var _commonStyles_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_commonStyles_less__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _projectShare_media_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./projectShare/media.less */ \"./sharedRes/projectShare/media.less\");\n/* harmony import */ var _projectShare_media_less__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_projectShare_media_less__WEBPACK_IMPORTED_MODULE_1__);\n\r\nlet req;\r\ntry {\r\n    req = __webpack_require__(\"./sharedRes/fonts sync recursive \\\\.(?:eot|svg|ttf|woff)$/i\");\r\n    req.keys().forEach((key) => req(key)); \r\n} catch(ex) {} \r\n\r\nreq = __webpack_require__(\"./sharedRes/standardBtns sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/arrowBtns sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/stages sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/switches sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/location sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/calendar sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/news sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/events sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\n\r\n // <---must be imported as last as possible\n\n//# sourceURL=webpack:///./sharedRes/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _commonStyles_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./commonStyles.less */ \"./sharedRes/commonStyles.less\");\n/* harmony import */ var _commonStyles_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_commonStyles_less__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _footer_script_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./footer/script.js */ \"./sharedRes/footer/script.js\");\n/* harmony import */ var _footer_script_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_footer_script_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _projectShare_media_less__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./projectShare/media.less */ \"./sharedRes/projectShare/media.less\");\n/* harmony import */ var _projectShare_media_less__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_projectShare_media_less__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\nlet req;\r\ntry {\r\n    req = __webpack_require__(\"./sharedRes/fonts sync recursive \\\\.(?:eot|svg|ttf|woff)$/i\");\r\n    req.keys().forEach((key) => req(key)); \r\n} catch(ex) {} \r\n\r\nreq = __webpack_require__(\"./sharedRes/standardBtns sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/arrowBtns sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/stages sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/switches sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/location sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/calendar sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/news sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\nreq = __webpack_require__(\"./sharedRes/events sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\r\n\r\n\r\n // <---must be imported as last as possible\n\n//# sourceURL=webpack:///./sharedRes/script.js?");
 
 /***/ }),
 
