@@ -1,0 +1,121 @@
+@import "../projectShare/common.less";
+
+.circleDiagrams {
+    display: flex;
+	flex-flow: row wrap;
+	margin-top: 24px;
+	margin-bottom: 35px;
+    &__diagram {
+        box-sizing: border-box;
+		display: flex;
+		justify-content: center;
+		&-realBox {
+			width: @circle-size;
+			height: @circle-size;
+		}
+		&-mod1 {
+			margin-left: -10px;
+			.radialProgress:after {
+				transform: translate(2.5px, -2.5px);
+			}
+		}
+		&-mod2 {
+			margin-left: 3.2%;
+			.radialProgress:after {
+				transform: translate(-2px, -2.5px);
+			}
+		}
+		&-mod3 {
+			margin-left: 6.4%;
+			.radialProgress:after {
+				transform: translate(-3px, -2px);
+			}
+		}
+		&-mod4 {
+			margin-left: 6%;
+			.radialProgress:after {
+				transform: translateX(-1.5px);
+			}
+		}
+		&-pie {
+			position: relative;
+			@centerPieRatio: 0.66;
+			&::after {
+				width: @centerPieRatio*@circle-size;
+				height: @centerPieRatio*@circle-size;
+				background-color: @mainColor;
+				border-radius: 50%;
+				content: "";
+				position: absolute;
+				margin-top: (1-@centerPieRatio)*@circle-size/2;
+			}
+		}
+    }
+}
+
+.radialProgress {
+	@inset-size: 85px;
+	width:  @circle-size;
+	height: @circle-size;
+    border-radius: 50%;
+	background-color: @mainColor;
+	position: relative;
+	&::after {
+		content: attr(data-percent);
+		letter-spacing: -2px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		text-align: center;
+		line-height: @circle-size;
+		.fontSize10();
+		color: @mediumGrey;
+	}
+
+	&__mask, &__fill {
+		width:    @circle-size;
+		height:   @circle-size;
+		position: absolute;
+		border-radius: 50%;
+	}
+
+	&__mask {
+		clip: rect(0px, @circle-size, @circle-size, @circle-size/2);
+	}
+	&__fill {
+			clip: rect(0px, @circle-size/2, @circle-size, 0px);
+			background-color: @red;
+	}
+        
+	&__inset {
+		width:       @inset-size;
+		height:      @inset-size;
+		position:    absolute;
+		margin-left: (@circle-size - @inset-size)/2;
+		margin-top:  (@circle-size - @inset-size)/2;
+		background-color: @mainColor;
+		border-radius: 50%;
+	}
+}
+
+@pieSize: (@circle-size + 1px)/2 - 0.5px;
+
+.pieChart {
+	position: relative;
+	&__part {
+		position: absolute;
+   	 	width: @pieSize;
+   	 	height: 2*@pieSize;
+    	overflow: hidden;
+    	left: 0;
+		transform-origin:left center;
+		&-before {
+			position: absolute;
+			width: @pieSize;
+			height: 2*@pieSize;
+			left: -@pieSize;
+			border-radius: @pieSize 0 0 @pieSize;
+			transform-origin:right center;
+		}
+	}
+}

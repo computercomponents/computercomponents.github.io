@@ -19,7 +19,12 @@ mixin createCircleProgress(percent, percentDelta = 0)
             .radialProgress__fill(style= str)
         .radialProgress__inset
 
-mixin createPieChart(partsNumber, ...details)
+mixin createPieChart(partsNumber, ...args)
+    - var details
+    - if(args.length == 1)
+        - details = args[0]
+    - else
+        - details = args
     - var progress = 0
     .pieChart
         - for(var i = 0; i < partsNumber; i++)
@@ -37,6 +42,15 @@ mixin createPieChart(partsNumber, ...details)
                 div.pieChart__part(style= style)
                     div(class= classes, style= beforeStyle)
                 - progress += current
+
+mixin createComplexPieChart(partsNumber, ...details)
+     .mainContent__diagramBox
+        .circleDiagrams__diagram-pie.circleDiagrams__diagram.circleDiagrams__diagram-realBox
+            +createPieChart(partsNumber,details)
+        ul.mainContent__diagramDescription
+            - for(var i = 0; i < partsNumber; i++)
+                - var classes = details[i+partsNumber] + " mainContent__descriptionItem "
+                li(class= classes)
 
 
 mixin createWarningSlider(percent)

@@ -31,6 +31,21 @@
 .darkGrey {
   background-color: #4f4f4f;
 }
+.diagramBlue {
+  background-color: #5284be;
+}
+.diagramRed {
+  background-color: #d25b59;
+}
+.diagramGreen {
+  background-color: #a2c55a;
+}
+.diagramPurple {
+  background-color: #8569aa;
+}
+.diagramLightBlue {
+  background-color: #3bb3d2;
+}
 .fontSizeSmall {
   font-size: 8.5px;
 }
@@ -340,6 +355,21 @@
 .darkGrey {
   background-color: #4f4f4f;
 }
+.diagramBlue {
+  background-color: #5284be;
+}
+.diagramRed {
+  background-color: #d25b59;
+}
+.diagramGreen {
+  background-color: #a2c55a;
+}
+.diagramPurple {
+  background-color: #8569aa;
+}
+.diagramLightBlue {
+  background-color: #3bb3d2;
+}
 .fontSizeSmall {
   font-size: 8.5px;
 }
@@ -402,6 +432,33 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.mainContent__diagramDescription {
+  margin-left: 8.5%;
+}
+.mainContent__diagramBox {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mainContent__descriptionItem {
+  border-radius: 50%;
+}
+.mainContent__descriptionItem:before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+.mainContent__descriptionItem:not(:first-child):before {
+  margin-top: 5px;
 }
 .sidePageBlock {
   display: -webkit-box;
@@ -525,6 +582,21 @@
 }
 .darkGrey {
   background-color: #4f4f4f;
+}
+.diagramBlue {
+  background-color: #5284be;
+}
+.diagramRed {
+  background-color: #d25b59;
+}
+.diagramGreen {
+  background-color: #a2c55a;
+}
+.diagramPurple {
+  background-color: #8569aa;
+}
+.diagramLightBlue {
+  background-color: #3bb3d2;
 }
 .fontSizeSmall {
   font-size: 8.5px;
@@ -676,6 +748,21 @@ a {
 }
 .darkGrey {
   background-color: #4f4f4f;
+}
+.diagramBlue {
+  background-color: #5284be;
+}
+.diagramRed {
+  background-color: #d25b59;
+}
+.diagramGreen {
+  background-color: #a2c55a;
+}
+.diagramPurple {
+  background-color: #8569aa;
+}
+.diagramLightBlue {
+  background-color: #3bb3d2;
 }
 .fontSizeSmall {
   font-size: 8.5px;
@@ -945,6 +1032,21 @@ input:checked + label .standardButtons__button:before {
 .darkGrey {
   background-color: #4f4f4f;
 }
+.diagramBlue {
+  background-color: #5284be;
+}
+.diagramRed {
+  background-color: #d25b59;
+}
+.diagramGreen {
+  background-color: #a2c55a;
+}
+.diagramPurple {
+  background-color: #8569aa;
+}
+.diagramLightBlue {
+  background-color: #3bb3d2;
+}
 .fontSizeSmall {
   font-size: 8.5px;
 }
@@ -1136,6 +1238,21 @@ input:checked + label .standardButtons__button:before {
 }
 .darkGrey {
   background-color: #4f4f4f;
+}
+.diagramBlue {
+  background-color: #5284be;
+}
+.diagramRed {
+  background-color: #d25b59;
+}
+.diagramGreen {
+  background-color: #a2c55a;
+}
+.diagramPurple {
+  background-color: #8569aa;
+}
+.diagramLightBlue {
+  background-color: #3bb3d2;
 }
 .fontSizeSmall {
   font-size: 8.5px;
@@ -1333,6 +1450,21 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .darkGrey {
   background-color: #4f4f4f;
+}
+.diagramBlue {
+  background-color: #5284be;
+}
+.diagramRed {
+  background-color: #d25b59;
+}
+.diagramGreen {
+  background-color: #a2c55a;
+}
+.diagramPurple {
+  background-color: #8569aa;
+}
+.diagramLightBlue {
+  background-color: #3bb3d2;
 }
 .fontSizeSmall {
   font-size: 8.5px;
@@ -1588,6 +1720,21 @@ input.switch__input:checked + .switch__label .switch__description {
 }
 .darkGrey {
   background-color: #4f4f4f;
+}
+.diagramBlue {
+  background-color: #5284be;
+}
+.diagramRed {
+  background-color: #d25b59;
+}
+.diagramGreen {
+  background-color: #a2c55a;
+}
+.diagramPurple {
+  background-color: #8569aa;
+}
+.diagramLightBlue {
+  background-color: #3bb3d2;
 }
 .fontSizeSmall {
   font-size: 8.5px;
@@ -1916,6 +2063,21 @@ input.switch__input:checked + .switch__label .switch__description {
 .darkGrey {
   background-color: #4f4f4f;
 }
+.diagramBlue {
+  background-color: #5284be;
+}
+.diagramRed {
+  background-color: #d25b59;
+}
+.diagramGreen {
+  background-color: #a2c55a;
+}
+.diagramPurple {
+  background-color: #8569aa;
+}
+.diagramLightBlue {
+  background-color: #3bb3d2;
+}
 .fontSizeSmall {
   font-size: 8.5px;
 }
@@ -2203,6 +2365,21 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
 .darkGrey {
   background-color: #4f4f4f;
 }
+.diagramBlue {
+  background-color: #5284be;
+}
+.diagramRed {
+  background-color: #d25b59;
+}
+.diagramGreen {
+  background-color: #a2c55a;
+}
+.diagramPurple {
+  background-color: #8569aa;
+}
+.diagramLightBlue {
+  background-color: #3bb3d2;
+}
 .fontSizeSmall {
   font-size: 8.5px;
 }
@@ -2330,6 +2507,21 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
 }
 .darkGrey {
   background-color: #4f4f4f;
+}
+.diagramBlue {
+  background-color: #5284be;
+}
+.diagramRed {
+  background-color: #d25b59;
+}
+.diagramGreen {
+  background-color: #a2c55a;
+}
+.diagramPurple {
+  background-color: #8569aa;
+}
+.diagramLightBlue {
+  background-color: #3bb3d2;
 }
 .fontSizeSmall {
   font-size: 8.5px;
@@ -2465,6 +2657,253 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
 }
 .darkGrey {
   background-color: #4f4f4f;
+}
+.diagramBlue {
+  background-color: #5284be;
+}
+.diagramRed {
+  background-color: #d25b59;
+}
+.diagramGreen {
+  background-color: #a2c55a;
+}
+.diagramPurple {
+  background-color: #8569aa;
+}
+.diagramLightBlue {
+  background-color: #3bb3d2;
+}
+.fontSizeSmall {
+  font-size: 8.5px;
+}
+.fontSize1 {
+  font-size: 10px;
+}
+.fontSize2 {
+  font-size: 11px;
+}
+.fontSize3 {
+  font-size: 12px;
+}
+.fontSize3Half {
+  font-size: 12.5px;
+}
+.fontSize4 {
+  font-size: 14.5px;
+}
+.fontSize5 {
+  font-size: 16px;
+}
+.fontSize6 {
+  font-size: 18px;
+}
+.fontSize6Big {
+  font-size: 20px;
+}
+.fontSize7Small {
+  font-size: 24px;
+}
+.fontSize7 {
+  font-size: 28px;
+}
+.fontSize8 {
+  font-size: 30px;
+}
+.fontSize9 {
+  font-size: 34px;
+}
+.fontSize9Big {
+  font-size: 36px;
+}
+.fontSize10 {
+  font-size: 40px;
+}
+.fontSize11 {
+  font-size: 73px;
+}
+.fontSize12 {
+  font-size: 80px;
+}
+.circleDiagrams {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin-top: 24px;
+  margin-bottom: 35px;
+}
+.circleDiagrams__diagram {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.circleDiagrams__diagram-realBox {
+  width: 95px;
+  height: 95px;
+}
+.circleDiagrams__diagram-mod1 {
+  margin-left: -10px;
+}
+.circleDiagrams__diagram-mod1 .radialProgress:after {
+  -webkit-transform: translate(2.5px, -2.5px);
+      -ms-transform: translate(2.5px, -2.5px);
+          transform: translate(2.5px, -2.5px);
+}
+.circleDiagrams__diagram-mod2 {
+  margin-left: 3.2%;
+}
+.circleDiagrams__diagram-mod2 .radialProgress:after {
+  -webkit-transform: translate(-2px, -2.5px);
+      -ms-transform: translate(-2px, -2.5px);
+          transform: translate(-2px, -2.5px);
+}
+.circleDiagrams__diagram-mod3 {
+  margin-left: 6.4%;
+}
+.circleDiagrams__diagram-mod3 .radialProgress:after {
+  -webkit-transform: translate(-3px, -2px);
+      -ms-transform: translate(-3px, -2px);
+          transform: translate(-3px, -2px);
+}
+.circleDiagrams__diagram-mod4 {
+  margin-left: 6%;
+}
+.circleDiagrams__diagram-mod4 .radialProgress:after {
+  -webkit-transform: translateX(-1.5px);
+      -ms-transform: translateX(-1.5px);
+          transform: translateX(-1.5px);
+}
+.circleDiagrams__diagram-pie {
+  position: relative;
+}
+.circleDiagrams__diagram-pie::after {
+  width: 62.7px;
+  height: 62.7px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  margin-top: 16.15px;
+}
+.radialProgress {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: relative;
+}
+.radialProgress::after {
+  content: attr(data-percent);
+  letter-spacing: -2px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  line-height: 95px;
+  font-size: 40px;
+  color: #888888;
+}
+.radialProgress__mask,
+.radialProgress__fill {
+  width: 95px;
+  height: 95px;
+  position: absolute;
+  border-radius: 50%;
+}
+.radialProgress__mask {
+  clip: rect(0px, 95px, 95px, 47.5px);
+}
+.radialProgress__fill {
+  clip: rect(0px, 47.5px, 95px, 0px);
+  background-color: #e75735;
+}
+.radialProgress__inset {
+  width: 85px;
+  height: 85px;
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 5px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+.pieChart {
+  position: relative;
+}
+.pieChart__part {
+  position: absolute;
+  width: 47.5px;
+  height: 95px;
+  overflow: hidden;
+  left: 0;
+  -webkit-transform-origin: left center;
+      -ms-transform-origin: left center;
+          transform-origin: left center;
+}
+.pieChart__part-before {
+  position: absolute;
+  width: 47.5px;
+  height: 95px;
+  left: -47.5px;
+  border-radius: 47.5px 0 0 47.5px;
+  -webkit-transform-origin: right center;
+      -ms-transform-origin: right center;
+          transform-origin: right center;
+}
+.lightGreen {
+  background-color: #4eb7a8;
+}
+.red {
+  background-color: #e75735;
+}
+.mainColor {
+  background-color: #ffffff;
+}
+.grey209 {
+  background-color: #d1d1d1;
+}
+.lightGrey {
+  background-color: #e5e5e5;
+}
+.almostWhite {
+  background-color: #f2f2f2;
+}
+.grey {
+  background-color: #747474;
+}
+.mediumGrey {
+  background-color: #888888;
+}
+.grey142 {
+  background-color: #8e8e8e;
+}
+.mediumLighterGrey {
+  background-color: #c0c0c0;
+}
+.darkGrey {
+  background-color: #4f4f4f;
+}
+.diagramBlue {
+  background-color: #5284be;
+}
+.diagramRed {
+  background-color: #d25b59;
+}
+.diagramGreen {
+  background-color: #a2c55a;
+}
+.diagramPurple {
+  background-color: #8569aa;
+}
+.diagramLightBlue {
+  background-color: #3bb3d2;
 }
 .fontSizeSmall {
   font-size: 8.5px;

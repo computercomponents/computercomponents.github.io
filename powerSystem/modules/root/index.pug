@@ -44,7 +44,25 @@ body.page
                     .content__topicLine.content__topicLine-right
 
                 p.content__p.content__p-smallerMarg Как показала многолетняя практика, многие начинающие сборщики компьютеров
-                    |  не уделяют должного внимание подсистеме питания компьютера. А зря!
+                    |  не уделяют должного внимание подсистеме питания компьютера. А зря! Общая задача подсистемы питания - 
+                    | преобразования 220В переменного тока (розетка) в 12\5\3.2 вольт соответственно, причем полученный ток 
+                    | должен быть уже постоянным. Основную задачу по преобразованию напряжения берет на себя Блок Питания.
+                    | Материнская плата дополнительно стабилизирует напряжение и подает соответствующие напряжения на нужные 
+                    | линии. Самая высоконагруженная линия в современных компьютерах - 12 вольт, её потребляют процессор и 
+                    | видеокарта (до 85% от общего энергопотребления). Однако, для питания накопителей данных из-за особенностей
+                    | схемотехники требуются подавать напряжение в районе 5 Вольт, 12 же сожжёт Ваш накопитель за несколько секунд!
+
+                .content__topicStart
+                    .content__topicLine.content__topicLine-left
+                    +createElement("","arrowButtons__button","toRight","enabled")
+                    h2.content__title.content__title-white Выбираем блок питания
+                    +createElement("","arrowButtons__button","toLeft","enabled")
+                    .content__topicLine.content__topicLine-right
+
+                h4.content__title.content__title-smaller.content__title-bordered Основные производители блоков питания:
+                +createComplexPieChart(5,40,21,15,9,15,"diagramBlue", "diagramRed", 
+                "diagramGreen","diagramPurple","diagramLightBlue")
+                
             
 
             .page__rightBlock.sidePageBlock.sidePageBlock-right

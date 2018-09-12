@@ -5,6 +5,27 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    &__diagramDescription {
+        margin-left: 8.5%;
+    }
+    &__diagramBox {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__descriptionItem {
+        border-radius: 50%;
+        &:before {
+            content: "";
+            width: 25px;
+            height: 25px;
+            display: block;
+        }
+        &:not(:first-child):before {
+            margin-top: 5px;
+        }
+    }
 }
 
 .sidePageBlock {

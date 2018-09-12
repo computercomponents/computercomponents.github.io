@@ -30,5 +30,8 @@ req.keys().forEach((key) => req(key));
 req = require.context("./events", true, /\.less$/im);
 req.keys().forEach((key) => req(key));
 
+req = require.context("./percentages", true, /\.less$/im);
+req.keys().forEach((key) => req(key));
+
 
 import media from "./projectShare/media.less"; // <---must be imported as last as possible
