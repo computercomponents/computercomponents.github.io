@@ -433,6 +433,43 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
+.mainContent__advice {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  font-size: 2em;
+  color: #10813e;
+}
+.mainContent__advice-negativeMargin {
+  margin-top: -40px;
+}
+.mainContent__advice:before {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 3px;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(#e5e5e5), color-stop(50%, #e75735), to(#e5e5e5));
+  background: linear-gradient(to right, #e5e5e5, #e75735 50%, #e5e5e5);
+  width: 70%;
+  margin-left: 15%;
+}
+@media (max-width: 700px) {
+  .mainContent__advice:before {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.mainContent__advice:after {
+  content: "!";
+  color: #e75735;
+  font-size: 3em;
+  margin-left: 3px;
+  display: inline-block;
+  -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
 .mainContent__diagramDescription {
   margin-left: 8.5%;
 }
@@ -447,6 +484,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media (max-width: 700px) {
+  .mainContent__diagramBox {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: 10%;
+  }
 }
 .mainContent__descriptionItem {
   border-radius: 50%;
@@ -725,6 +770,9 @@ a {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
+  -webkit-box-ordinal-group: 10000;
+      -ms-flex-order: 9999;
+          order: 9999;
 }
 .footer__info {
   margin-top: 10px;
@@ -1569,6 +1617,32 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+.switch__container-inCol:before,
+.switch__container-inCol:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), color-stop(50%, #4eb7a8), to(#f2f2f2));
+  background: linear-gradient(to bottom, #f2f2f2, #4eb7a8 50%, #f2f2f2);
+}
+.switch__container-inCol:before {
+  left: 15%;
+}
+@media (max-width: 700px) {
+  .switch__container-inCol:before {
+    left: 5px;
+  }
+}
+.switch__container-inCol:after {
+  right: 15%;
+}
+@media (max-width: 700px) {
+  .switch__container-inCol:after {
+    right: 5px;
+  }
 }
 .switch__input {
   display: none;
@@ -3033,12 +3107,13 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
   .circleDiagrams {
     margin-top: 40px;
   }
-  .circleDiagrams__diagram {
+  .circleDiagrams__diagram:not(.circleDiagrams__diagram-realBox) {
+    background-color: red !important;
     width: 50%;
     margin-left: 0 ;
     margin-bottom: 25px;
   }
-  .circleDiagrams__diagram-pie:not(.circleDiagrams__diagram-realBox) {
+  .circleDiagrams__diagram:not(.circleDiagrams__diagram-realBox)-pie {
     width: 100%;
     height: 95px;
   }

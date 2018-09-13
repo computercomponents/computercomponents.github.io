@@ -73,6 +73,63 @@ body.page
                         +createCheckGroup(9,1,["Большой вес", "Качественные конденсаторы",
                          "Модульная конструкция", "Продуманная схемотехника", "Эффективное охлаждение", "Низкий шум при работе", 
                          "Высокий КПД","> 90% мощности приходится на 12В линию", "Низкая цена"],1,2,3,4,5,6,7,8)
+
+                .mainContent__advice.mainContent__advice-negativeMargin Обратите внимание
+                p.content__p Качественные блоки питания стоят существенно дороже обычных, офисных. Вовлекая во внимание и тот факт
+                    | , что сам по себе блок прямым образом никак не влияет не производительность, возникает желание сэкономить на этом
+                    | на компоненте. Пожалуйста, помните, что блок питания - "сердце" вашего компьютера, некачественный блок 
+                    | питания не просто может сгореть во время неблагоприятных условий, но и утащить за собой половину Вашего
+                    | компьютера
+                
+                .content__topicStart
+                    .content__topicLine.content__topicLine-left
+                    +createElement("","arrowButtons__button","toRight","enabled")
+                    h2.content__title.content__title-white Выбираем материнскую плату
+                    +createElement("","arrowButtons__button","toLeft","enabled")
+                    .content__topicLine.content__topicLine-right
+                
+                p.content__p В этом разделе мы предоставим Вам несколько вопросов, ответив на них, Вам станет гораздо проще
+                    | подобрать нужную Вам материнскую плату, не заплатив лишнего 
+                
+                h3.content__title.content__title-smaller.content__title-marg.content__title-bordered 1. Выберите размер Вашей
+                    |  материнской платы
+                .content__stageContainer
+                    +createStageChart(1,1)
+                p.content__p Подсказка: Как правило, чем больше плата, тем проще на ней разместить компоненты системы, чтобы 
+                    | они не находились слишком близко друг к другу и не перегревались, но следите за тем, чтобы плата такого
+                    | размера поместались в Ваш корпус!
+                
+                h3.content__title.content__title-smaller.content__title-marg.content__title-bordered 2. Нужна ли Вам возможность
+                    |  разгона процессора и RAM?
+                .content__stageContainer
+                    +createStageChart(2,2)
+                p.content__p Подсказка: Скорее всего, на данном этапе разгон Вам не понадобится, так как проведение этой процедуры
+                    |  несет определенный риск для Вашего железа. Наберитесь опыта, и задайте когда-нибудь этот вопрос себе снова
+
+                h3.content__title.content__title-smaller.content__title-marg.content__title-bordered 3. Сколько памяти Вам нужно?
+                .content__stageContainer
+                    +createStageChart(3,3)
+                p.content__p Подсказка: Если Вам требуется более 8 ГБ памяти, следует присмотреться к МП с 4 слотами под RAM
+
+                h3.content__title.content__title-smaller.content__title-marg.content__title-bordered 4. Насколько Вам важно качество 
+                    | звукового тракта?
+                .content__stageContainer
+                    +createStageChart(4,4)
+                p.content__p Подсказка: Как правило, более качественными звуковыми чипами оснащают МП от 11000 рублей и выше
+
+                h3.content__title.content__title-smaller.content__title-marg.content__title-bordered 5. Сколько накопителей данных
+                    |  Вы планируете разместить в Вашем компьютере?
+                .content__stageContainer
+                    +createStageChart(5,5)
+                p.content__p Подсказка: Стандартное число SATA-портов: 4. Если Вам этого не хватает, следует оценить более дорогие
+                    |  модели МП
+                
+                .content__topicStart
+                    .content__topicLine.content__topicLine-left
+                    +createElement("","arrowButtons__button","toRight","enabled")
+                    h2.content__title.content__title-white Ответы на Ваши вопросы
+                    +createElement("","arrowButtons__button","toLeft","enabled")
+                    .content__topicLine.content__topicLine-right
                 
             
 

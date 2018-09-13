@@ -49,11 +49,12 @@
     }   
     .circleDiagrams{
         margin-top: 40px;
-        &__diagram {
+        &__diagram:not(&__diagram-realBox) {
+            background-color: red !important;
             width: 50%;
             margin-left: 0 ;
             margin-bottom: 25px;
-            &-pie:not(&-realBox) {
+            &-pie {
                 width: 100%;
                 height: @circle-size;
             }

@@ -1,10 +1,46 @@
 @import "../../../sharedRes/vars.less";
 @import "../../../sharedRes/projectShare/common.less";
 
+
+.PayAttention(@fz) {
+    content: "!";
+    color: @red;
+    font-size: @fz;
+    margin-left: 3px;
+    display: inline-block;
+    transform: rotate(10deg);
+}
 .mainContent {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    &__advice {
+        width: 100%;
+        text-align: center;
+        position: relative;
+        font-size: 2em;
+        color: rgb(16, 129, 62);
+        &-negativeMargin {
+            margin-top: -40px;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            bottom: 3px;
+            height: 2px;
+            background: linear-gradient(to right, @lightGrey, @red 50%, @lightGrey);
+            width: 70%;
+            margin-left: 15%;
+            @media (max-width: @mobileWidth) {
+               width: 100%;
+               margin-left: 0;
+            }
+        }
+        &:after {
+            .PayAttention(3em);
+        }
+    }
     &__diagramDescription {
         margin-left: 8.5%;
     }
@@ -13,6 +49,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @media (max-width: @mobileWidth) {
+            justify-content: flex-start;
+            margin-left: 10%;
+        }
     }
     &__descriptionItem {
         border-radius: 50%;
@@ -78,12 +118,7 @@
         &-left {
             border-bottom: 1px dashed @red;
             &:after {
-                content: "!";
-                color: @red;
-                font-size: 1.6em;
-                margin-left: 3px;
-                display: inline-block;
-                transform: rotate(10deg);
+                .PayAttention(1.6em);
             }
         }
         &-right {
