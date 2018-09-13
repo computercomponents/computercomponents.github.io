@@ -84,7 +84,7 @@ body.page
                 .content__topicStart
                     .content__topicLine.content__topicLine-left
                     +createElement("","arrowButtons__button","toRight","enabled")
-                    h2.content__title.content__title-white Выбираем материнскую плату
+                    h2.content__title.content__title-white Выбираем основную плату
                     +createElement("","arrowButtons__button","toLeft","enabled")
                     .content__topicLine.content__topicLine-right
                 
@@ -135,5 +135,32 @@ body.page
 
             .page__rightBlock.sidePageBlock.sidePageBlock-right
                 .sidePageBlock__title.sidePageBlock__title-right Наши спонсоры рекомендуют:
+                .sidePageBlock__itemBlock
+                    +createUserProfile("out/userProfiles/img/PSU1.jpg", "Accord 450W", "Bronze+", 30, 45)
+                    .sidePageBlock__buttonBox
+                        +createElement("Подробнее","standardButtons__button", "big", "shadow", "success")
+                    .sidePageBlock__buttonBox.sidePageBlock__buttonBox-special
+                        +createElement("Лучшее качество","standardButtons__button", "big", "shadow", "warning")
+
+
+                .sidePageBlock__itemBlock
+                    +createUserProfile("out/userProfiles/img/PSU2.jpg", "CMI 750X", "Silver++", 50, 55)
+                    .sidePageBlock__buttonBox
+                        +createElement("Подробнее","standardButtons__button", "big", "empty", "success")
+                    .sidePageBlock__buttonBox.sidePageBlock__buttonBox-special
+                        +createElement("Лучшая цена","standardButtons__button", "big", "empty", "warning")
+
+                .sidePageBlock__itemBlock
+                    +createUserProfile("out/userProfiles/img/motherboard1.jpg", "Z170", "Unblocked", 50, 70, true)
+                    .sidePageBlock__buttonBox
+                        +createElement("Подробнее","standardButtons__button", "small", "empty", "warning")
+                
+                .sidePageBlock__itemBlock
+                    +createUserProfile("out/userProfiles/img/motherboard2.jpeg", "Gaming AM4+", "LED", 30, 70)
+                    .sidePageBlock__buttonBox
+                        +createElement("Подробнее","standardButtons__button", "big", "empty", "success")
+                    .sidePageBlock__buttonBox.sidePageBlock__buttonBox-special
+                        +createElement("Гарантия 2 года","standardButtons__button", "big", "shadow", "success")
+
 
             include ../../../sharedRes/footer/block

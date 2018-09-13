@@ -266,3 +266,29 @@ mixin createMessaging(fullName, avatar, incomeMsg, outcomeMsg)
             .messaging__msg.messaging__msg-outcome
                 span.messaging__textContent #{outcomeMsg}
             +createElement("Reply","standardButtons__button", "big", "shadow", "success", "!messaging__replyBtn")
+
+mixin createUserProfile(imgSrc, itemName, itemFeature, deltaX, deltaY, alternative = false)
+    - var locStyle = "object-position: " + deltaX +"% " + deltaY +"%";
+
+    - var infoClasses = "userProfile__info userProfile__info-inSide";
+    - var nameClasses = "userProfile__fullName";
+    - var titleClasses = "userProfile__title";
+    - if(alternative)
+        - infoClasses += " userProfile__info-alternative";
+        - nameClasses += " userProfile__fullName-alternative";
+        - titleClasses += " userProfile__title-alternative";
+
+
+    .userProfile.userProfile-littleMargL.userProfile-inSide
+        img.userProfile__photo.userProfile__photo-darker.userProfile__photo-larger.userProfile__photo-inSide(src= imgSrc, 
+            style= locStyle)
+        div(class= infoClasses)
+            div(class= nameClasses) #{itemName}
+            div(class= titleClasses) #{itemFeature}
+            .userProfile__social
+                a.userProfile__ref(href="#")
+                    .userProfile__socialBtn.userProfile__socialBtn-dns
+                a.userProfile__ref(href="#")
+                    .userProfile__socialBtn.userProfile__socialBtn-ulmart
+                a.userProfile__ref(href="#")
+                    .userProfile__socialBtn.userProfile__socialBtn-mvideo

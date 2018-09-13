@@ -98,6 +98,32 @@
             margin-right: @mobileMargin;
         }
     }
+    &__itemBlock {
+        display: flex;
+        flex-direction: column;
+        margin-right: -20px;
+        border: 1px dashed @lightGreen;
+        border-radius: 10px;
+        padding-bottom: 10px;
+        padding-right: 5px;
+        position: relative;
+        margin-bottom: 30px;
+    }
+    &__buttonBox {
+        margin-top: 10px;
+        align-self: flex-end;
+        &-special {
+            position: absolute;
+            transform: rotate(35deg);
+            left: -20px;
+            bottom: 10px;
+            @media (max-width: @widthLimit) {
+               top: -25px;
+               left: 70px;
+               transform: rotate(-40deg);
+            }
+        }
+    }
     &-middle {
         margin-left:  @mobileMargin;
         margin-right: @mobileMargin;
