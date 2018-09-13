@@ -130,11 +130,36 @@ body.page
                     h2.content__title.content__title-white Ответы на Ваши вопросы
                     +createElement("","arrowButtons__button","toLeft","enabled")
                     .content__topicLine.content__topicLine-right
+
+                .mainContent__qaList
+
+                    .mainContent__qa
+                        +createMessaging("Анна И.", "out/qa/img/woman1.jpg", 
+                        "Здравствуйте, чем модульные блоки питания лучше обычных?",
+                        "Облегчает сборку компьютера и улучшает воздушные потоки", 55, 40,"Мне помогло")
+
+                    .mainContent__qa
+                        +createMessaging("Петр В.", "out/qa/img/man1.jpg", 
+                        "На моем блоке питания, что он 500W, но БП уходит в защиту на 450",
+                        "500W - суммарная мощность по всем линиям, а Вы, вероятно, нагружаете только 12В",
+                         45, 40,"Мне помогло")
+
+                    .mainContent__qa
+                        +createMessaging("Петр В.", "out/qa/img/man1.jpg", 
+                        "Через 2 года после покупки блока питания из него начал издавать странный шум, что это?",
+                        "Скорее всего, втулка вентилятора вашего БП засорилась, необходимо прочистить и смазать",
+                         45, 40,"Мне помогло")
+                    
+                    .mainContent__qa
+                        +createMessaging("Анна И.", "out/qa/img/woman1.jpg", 
+                        "Как сбросить настройки BIOS. Материнская плата Z170-X5",
+                        "Найдите батарейку, питающую BIOS, и выньте ее на 4-6 минут", 55, 40,"Мне помогло")
                 
             
 
             .page__rightBlock.sidePageBlock.sidePageBlock-right
                 .sidePageBlock__title.sidePageBlock__title-right Наши спонсоры рекомендуют:
+
                 .sidePageBlock__itemBlock
                     +createUserProfile("out/userProfiles/img/PSU1.jpg", "Accord 450W", "Bronze+", 30, 45)
                     .sidePageBlock__buttonBox
@@ -163,4 +188,4 @@ body.page
                         +createElement("Гарантия 2 года","standardButtons__button", "big", "shadow", "success")
 
 
-            include ../../../sharedRes/footer/block
+        include ../../../sharedRes/footer/block

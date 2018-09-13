@@ -252,20 +252,21 @@ mixin createCalendar(startId,currentDay, month, lastDayCurrent, weekDayStart = 1
         .calendar__expand
 
 
-mixin createMessaging(fullName, avatar, incomeMsg, outcomeMsg) 
+mixin createMessaging(fullName, avatar, incomeMsg, outcomeMsg, deltaX, deltaY, btnMsg) 
+    - var locStyle = "object-position: " + deltaX +"% " + deltaY +"%";
     .messaging
         .messaging__fullName #{fullName}
         .messaging__line
         .messaging__icons
             .messaging__icon.messaging__icon-msg
-            img.messaging__avatar.userProfile__photo.messaging__avatar-altCentered(src = avatar, alt)
+            img.messaging__avatar.userProfile__photo.userProfile__photo-darker(src = avatar, style= locStyle)
             .messaging__icon.messaging__icon-photo
         .messaging__mainArea
             .messaging__msg.messaging__msg-income
                 span.messaging__textContent #{incomeMsg}
             .messaging__msg.messaging__msg-outcome
                 span.messaging__textContent #{outcomeMsg}
-            +createElement("Reply","standardButtons__button", "big", "shadow", "success", "!messaging__replyBtn")
+            +createElement(btnMsg,"standardButtons__button", "big", "shadow", "success", "!messaging__replyBtn")
 
 mixin createUserProfile(imgSrc, itemName, itemFeature, deltaX, deltaY, alternative = false)
     - var locStyle = "object-position: " + deltaX +"% " + deltaY +"%";

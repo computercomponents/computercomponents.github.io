@@ -36,6 +36,9 @@ req.keys().forEach((key) => req(key));
 req = require.context("./userProfiles", true, /\.less$/im);
 req.keys().forEach((key) => req(key));
 
+req = require.context("./messaging", true, /\.less$/im);
+req.keys().forEach((key) => req(key));
+
 
 
 import media from "./projectShare/media.less"; // <---must be imported as last as possible
