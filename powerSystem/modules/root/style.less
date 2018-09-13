@@ -16,6 +16,7 @@
     }
     &__descriptionItem {
         border-radius: 50%;
+        position: relative;
         &:before {
             content: "";
             width: 25px;
@@ -24,6 +25,16 @@
         }
         &:not(:first-child):before {
             margin-top: 5px;
+        }
+        &:after {
+            content: attr(data-description);
+            position: absolute;
+            top: 0;
+            color: @darkGrey;
+            font-family: "SourceRegular", Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            right: -5px;
+            transform: translateX(100%) translateY(0.1em);
         }
     }
 }

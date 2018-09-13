@@ -61,7 +61,18 @@ body.page
 
                 h4.content__title.content__title-smaller.content__title-bordered Основные производители блоков питания:
                 +createComplexPieChart(5,40,21,15,9,15,"diagramBlue", "diagramRed", 
-                "diagramGreen","diagramPurple","diagramLightBlue")
+                "diagramGreen","diagramPurple","diagramLightBlue","Chieftec", "CoolerMaster", "AcBel", "InWin", "Thermaltake")
+
+                p.content__p По нашему опыту, можем подсказать, что блоки питания фирмы Thermaltake наиболее надежны. К сожалению,
+                    | на рынке представлено не так много блоков питания этого производителя
+
+                h4.content__title.content__title-smaller.content__title-marg Что отличает качественный блок питания?
+
+                .switch
+                    .switch__container.switch__container-inCol
+                        +createCheckGroup(9,1,["Большой вес", "Качественные конденсаторы",
+                         "Модульная конструкция", "Продуманная схемотехника", "Эффективное охлаждение", "Низкий шум при работе", 
+                         "Высокий КПД","> 90% мощности приходится на 12В линию", "Низкая цена"],1,2,3,4,5,6,7,8)
                 
             
 

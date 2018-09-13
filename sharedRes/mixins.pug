@@ -50,7 +50,7 @@ mixin createComplexPieChart(partsNumber, ...details)
         ul.mainContent__diagramDescription
             - for(var i = 0; i < partsNumber; i++)
                 - var classes = details[i+partsNumber] + " mainContent__descriptionItem "
-                li(class= classes)
+                li(class= classes data-description= details[i + 2*partsNumber])
 
 
 mixin createWarningSlider(percent)
