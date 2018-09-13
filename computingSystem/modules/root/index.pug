@@ -1,0 +1,68 @@
+include ../../../sharedRes/mixins
+
+head
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title Вычислительная подсистема
+    link(rel="stylesheet", href="out/styles.css")
+body.page
+    .page__wrapper
+        .page__header.header
+            ul.header__navigation.header__navigation-sidePage
+                li.header__navRef.header__navRef-sidePage
+                    .content__topicLine.content__topicLine-left.content__topicLine-green
+                    +createElement("","arrowButtons__button","toRight","borderOnly","small","margL") 
+                    a(href="index.html") На главную
+                    +createElement("","arrowButtons__button","toLeft","borderOnly","small","margR") 
+                    .content__topicLine.content__topicLine-right.content__topicLine-green
+            h1.header__title Собираем вычислительную подсистему
+
+        .mainContent
+            .page__leftBlock.sidePageBlock.sidePageBlock-left
+                .sidePageBlock__title.sidePageBlock__title-left Это интересно
+                ul.sidePageBlock__facts
+                    li.sidePageBlock__fact Современные процессоры обладают вычислительной мощностью, в миллиарды раз 
+                        | превосходящие человеческую
+
+
+            .page__middleBlock.sidePageBlock.sidePageBlock-middle
+                .content__topicStart
+                    .content__topicLine.content__topicLine-left
+                    +createElement("","arrowButtons__button","toRight","enabled")
+                    h2.content__title.content__title-white Компоненты
+                    +createElement("","arrowButtons__button","toLeft","enabled")
+                    .content__topicLine.content__topicLine-right
+
+                p.content__p.content__p-smallerMarg В вычислительной подсистеме принято выделять оперативную память, процессор
+                    |  и графический ускоритель
+
+                .content__topicStart
+                    .content__topicLine.content__topicLine-left
+                    +createElement("","arrowButtons__button","toRight","enabled")
+                    h2.content__title.content__title-white Ответы на Ваши вопросы
+                    +createElement("","arrowButtons__button","toLeft","enabled")
+                    .content__topicLine.content__topicLine-right
+
+                .mainContent__qaList
+
+                    .mainContent__qa
+                        +createMessaging("Анна И.", "out/qa/img/woman1.jpg", 
+                        "Что значит индекс К у процессоров Intel?",
+                        "Позволяет вручную увеличивать тактовую частоту процесора", 55, 40,"Мне помогло")
+
+                
+            
+
+            .page__rightBlock.sidePageBlock.sidePageBlock-right
+                .sidePageBlock__title.sidePageBlock__title-right Наши спонсоры рекомендуют:
+
+                .sidePageBlock__itemBlock
+                    +createUserProfile("out/userProfiles/img/CPU1.jpg", "i7-6700K", "4.2GHZ+", 45, 55, true)
+                    .sidePageBlock__buttonBox
+                        +createElement("Подробнее","standardButtons__button", "big", "shadow", "success")
+                    .sidePageBlock__buttonBox.sidePageBlock__buttonBox-special
+                        +createElement("Gamer choice","standardButtons__button", "big", "shadow", "warning")
+
+
+        include ../../../sharedRes/footer/block

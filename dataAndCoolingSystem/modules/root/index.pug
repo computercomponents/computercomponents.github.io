@@ -1,0 +1,82 @@
+include ../../../sharedRes/mixins
+
+head
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title Подсистема хранения данных. Охлаждение
+    link(rel="stylesheet", href="out/styles.css")
+body.page
+    .page__wrapper
+        .page__header.header
+            ul.header__navigation.header__navigation-sidePage
+                li.header__navRef.header__navRef-sidePage
+                    .content__topicLine.content__topicLine-left.content__topicLine-green
+                    +createElement("","arrowButtons__button","toRight","borderOnly","small","margL") 
+                    a(href="index.html") На главную
+                    +createElement("","arrowButtons__button","toLeft","borderOnly","small","margR") 
+                    .content__topicLine.content__topicLine-right.content__topicLine-green
+            h1.header__title Проектируем систему охлаждения. Храним данные
+
+        .mainContent
+            .page__leftBlock.sidePageBlock.sidePageBlock-left
+                .sidePageBlock__title.sidePageBlock__title-left Это интересно
+                ul.sidePageBlock__facts
+                    li.sidePageBlock__fact Силовые элементы схемы могут безопасно нагреваться до температур, значительно более
+                        | высоких, чем полупроводниковые (вплоть до 130 градусов)
+
+
+            .page__middleBlock.sidePageBlock.sidePageBlock-middle
+                .content__topicStart
+                    .content__topicLine.content__topicLine-left
+                    +createElement("","arrowButtons__button","toRight","enabled")
+                    h2.content__title.content__title-white Подсистема хранения данных
+                    +createElement("","arrowButtons__button","toLeft","enabled")
+                    .content__topicLine.content__topicLine-right
+
+                p.content__p.content__p-smallerMarg Данные могут храниться на HDD или SSD
+
+                .content__topicStart
+                    .content__topicLine.content__topicLine-left
+                    +createElement("","arrowButtons__button","toRight","enabled")
+                    h2.content__title.content__title-white Система охлаждения
+                    +createElement("","arrowButtons__button","toLeft","enabled")
+                    .content__topicLine.content__topicLine-right
+
+                p.content__p.content__p-smallerMarg Процессор охлаждается кулером. У видеокарты, как правило, собственная СО.
+                    |  В корпусе дополнительно могут быть размещены вентиляторы для забора и выдува воздуха
+
+                .content__topicStart
+                    .content__topicLine.content__topicLine-left
+                    +createElement("","arrowButtons__button","toRight","enabled")
+                    h2.content__title.content__title-white Ответы на Ваши вопросы
+                    +createElement("","arrowButtons__button","toLeft","enabled")
+                    .content__topicLine.content__topicLine-right
+
+                .mainContent__qaList
+
+                    .mainContent__qa
+                        +createMessaging("Петр В.", "out/qa/img/man1.jpg", 
+                        "Почему SSD диски бесшумные?",
+                        "В них нет движущихся механических частей", 47, 38,"Мне помогло")
+
+                
+            
+
+            .page__rightBlock.sidePageBlock.sidePageBlock-right
+                .sidePageBlock__title.sidePageBlock__title-right Наши спонсоры рекомендуют:
+
+                .sidePageBlock__itemBlock
+                    +createUserProfile("out/userProfiles/img/cooler1.jpg", "Gammaxx 400", "90 CFM", 75, 40)
+                    .sidePageBlock__buttonBox
+                        +createElement("Подробнее","standardButtons__button", "big", "shadow", "warning")
+                    .sidePageBlock__buttonBox.sidePageBlock__buttonBox-special
+                        +createElement("Silent fan","standardButtons__button", "big", "empty", "success")
+
+                .sidePageBlock__itemBlock
+                    +createUserProfile("out/userProfiles/img/hdd1.jpg", "WD Blue", "1TB", 45, 60)
+                    .sidePageBlock__buttonBox
+                        +createElement("Подробнее","standardButtons__button", "big", "empty", "warning")
+
+
+        include ../../../sharedRes/footer/block
